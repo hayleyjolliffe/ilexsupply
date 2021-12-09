@@ -1,0 +1,34 @@
+/*--
+
+
+
+        FINAL PROJECT
+        for INFO-1251 + INFO-1272
+        || 'Ilex Supply Co.' Store Concept
+        || Due Dec. 17, 2021 @ 11:59PM
+        || main.css
+        Hayley Jolliffe — 2021
+
+        Update: Due Dec. 19, 2021 @ 11:59PM
+
+
+
+--*/
+
+/*-- BODY --*/
+body {
+        background-color:#202020;
+        color:#fafafa;
+        font-family:Helvetica, sans-serif;
+        font-weight:300;
+        text-decoration:none;
+}
+
+a {
+        text-decoration:underline;
+}
+
+a:hover {
+        color:#999;
+        text-decoration:underline;
+}
