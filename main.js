@@ -45,3 +45,14 @@ function Cart(i, p, q, s)
     this.quantity = q;              // Integer
     this.shipping = s;              // Float
 }
+
+/*
+
+    GLOBAL VARIABLES
+
+*/
+// Creating 'aStore' to hold the store's items
+var aStore = [];
+
+// Creating 'aCart' to hold the cart's items
+var aCart = [];
