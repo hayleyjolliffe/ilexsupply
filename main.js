@@ -41,7 +41,7 @@ function Store(id, n, p, q, m, c, s, r, d, i)
 function Cart(i, p, q, s)
 {
     this.id = i;                    // String
-    this.price = p;                 // Number
-    this.quantity = q;              // Number
-    this.shipping = s;              // Number
+    this.price = p;                 // Float
+    this.quantity = q;              // Integer
+    this.shipping = s;              // Float
 }
