@@ -56,3 +56,88 @@ var aStore = [];
 
 // Creating 'aCart' to hold the cart's items
 var aCart = [];
+
+/*
+
+    FUNCTIONS
+
+*/
+// Creating 'function initialize()'
+/*
+    PARAMETERS:
+    > 'Display the current day/time to the screen'
+    > 'Populate the store items array with AT LEAST 15 store object items
+       with varying data (different categories, quantities, etc.)
+    > Call your function that will display the store items array (Step 4)
+    > Call your function that will display the cart items array (Step 5)
+*/
+function initialize()
+{
+
+}
+
+// Creating 'function displayItems()'
+/*
+    PARAMETERS:
+    > 'Display the store items array in a dynamically generated table'
+       (or something similar, like a card-grid system)
+    > Properties to display: id, name, price, quantity on hand, max per
+      customer, category, image
+    > Price displayed using selected currency (Step 7)
+    > Call when page loads (from 'initialize()')
+    > Call when user changes the item category
+*/
+function displayItems()
+{
+
+}
+
+// Creating 'function displayCart()'
+/*
+    PARAMETERS:
+    > 'Display the cart items array'
+    > Call when user adds/removes items from the cart
+    > Output "No items in cart" if nothing is in the cart
+    > Output for each item: [id, price, quantity, (price * qty)]
+    > Displayed using selected currency
+*/
+function displayCart()
+{
+
+}
+
+// Creating 'function calculateCart()'
+/*
+    PARAMETERS:
+    > 'Create a function that will calculate and display the totals for
+       the orders in the cart
+    > Output the SUBTOTAL of the cart
+    > Output the estimated shipping
+    > Output the SUBTOTAL, including shipping
+    > Output the tax
+    > Output the TOTAL (Subtotal + tax)
+    > Prices displayed using the selected currency
+    NOTE: You can use Canadian tax (13%), even if selected currency is not
+          CAD. Shipping cost can be the sum of each item's shipping cost.
+*/
+function calculateCart()
+{
+
+}
+
+// Creating 'function currencySelection()'
+/*
+    PARAMETERS:
+    > 'There should be an element on the page for the user to select their
+       preferred currency
+    > 'The selected currency should be displayed/used throughout the webpage.
+       Wherever a price is displayed, it is converted to the currency selected
+       when it is displayed.
+    > The currencies are: Canadian (default), and an additional currency of
+      your choice
+    HINT: This could be a function that you call whenever you display a price.
+*/
+function currencySelection()
+{
+    
+}
