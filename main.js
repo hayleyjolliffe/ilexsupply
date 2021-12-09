@@ -73,7 +73,46 @@ var aCart = [];
 */
 function initialize()
 {
+    /*
+        POPULATING STORE INVENTORY
+        Format: new Store(id, n, p, q, m, c, s, r, d, i)
+    */
+    // Log before populating
+    console.log(aStore);
+    
+    // Item 001 — Pokemon Celebrations Pikachu Card
+    aStore.push("P025", "Pokemon Celebrations Pikachu Card", "9.99", "");
+    // Item 002 — Dungeons & Dragons
+    aStore.push("D");
+    // Item 003 — Catan: 
+    aStore.push("C");
+    // Item 004 — Magic: The Gathering
+    aStore.push("M");
+    // Item 005 — Pokemon Celebrations Dialga Card
+    aStore.push("P483", "Pokemon Celebrations Dialga Card", "9.99");
+    // Item 006 — Dungeons & Dragons
+    aStore.push("D");
+    // Item 007 — Pokemon Celebrations Zekrom Card
+    aStore.push("P644", "Pokemon Celebrations Zekrom Card", "14.99", "");
+    // Item 008 — Dungeons & Dragons
+    aStore.push("D");
+    // Item 009 — Catan: 
+    aStore.push("C");
+    // Item 010 — Pokemon Celebrations Ho-Oh Card
+    aStore.push("P250", "Pokemon Celebrations Ho-Oh Card", "9.99");
+    // Item 011 — Magic: The Gathering
+    aStore.push("M");
+    // Item 012 — Dungeons & Dragons
+    aStore.push("D");
+    // Item 013 — Catan: 
+    aStore.push('C');
+    // Item 014 — Pokemon Celebrations Palkia Card
+    aStore.push("P484", "Pokemon Celebrations Palkia Card", "9.99", "");
+    // Item 015 — Dungeons & Dragons
+    aStore.push("D");
 
+    // Log after populating
+    console.log(aStore);
 }
 
 // Creating 'function displayItems()'
@@ -139,5 +178,5 @@ function calculateCart()
 */
 function currencySelection()
 {
-    
+
 }
