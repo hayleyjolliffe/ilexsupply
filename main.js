@@ -81,36 +81,44 @@ function initialize()
     console.log(aStore);
     
     // Item 001 — Pokemon Celebrations Pikachu Card
-    aStore.push("P025", "Pokemon Celebrations Pikachu Card", "9.99", "");
-    // Item 002 — Dungeons & Dragons
-    aStore.push("D");
-    // Item 003 — Catan: 
-    aStore.push("C");
-    // Item 004 — Magic: The Gathering
-    aStore.push("M");
-    // Item 005 — Pokemon Celebrations Dialga Card
-    aStore.push("P483", "Pokemon Celebrations Dialga Card", "9.99");
-    // Item 006 — Dungeons & Dragons
-    aStore.push("D");
+    aStore.push(new Store("P025", "Pokemon Celebrations Pikachu Card", "9.99", "7", "1", "Pokemon", "0.99", "", "It has small electric sacs on both its cheeks. If threatened, it looses electric charges from the sacs. '\n' This card takes inspiration from Base Set Pikachu, and is nearly identical in gameplay aside from its HP being increased from 40 to 60.", "https://tcgplayer-cdn.tcgplayer.com/product/250303_200w.jpg"));
+    
+    // Item 002 — Dungeons & Dragons 'Blood Oath' Custom Dice Set
+    aStore.push(new Store("D973", "Dungeons & Dragons 'Blood Oath' Custom Dice Set", "14.99", "10", "1", "", "Dungeons & Dragons", "1.99", "'Blood Oath' features red & white translucent dice with gold pips. '\n' Set includes: D4, D6, D8, D10, D12, and D20 dice, along with a drawstring pouch for storage.", "https://i.etsystatic.com/19854159/r/il/8e8b29/3104159035/il_1588xN.3104159035_ejjz.jpg"));
+    
+    // Item 003 — Catan: Extension 
+    aStore.push(new Store("C405", "Catan: 5-6 Player Extension", "39.99", "10", "2", "Catan", "5.99", "", "Now 5-6 players can explore and settle Catan! Add 1-2 more friends or family, and expand your island with 2 more harbors, 11 terrain tiles, and green and brown settlers. '\n' NOTE: This is NOT a complete game; you will need a Catan base game in order to use this extension!", "https://catanshop.com/images/thumbs/0000405_catan-5-6-player-extension.jpeg"));
+    
+    // Item 004 — Pokemon Celebrations Dialga Card
+    aStore.push(new Store("P483", "Pokemon Celebrations Dialga Card", "9.99", "10", "1", "Pokemon", "0.99", "", "It has the power to control time. It appears in Sinnoh-region myths as an ancient deity. '\n' This card's Pokedex entry comes from Pokemon Y.", "https://tcgplayer-cdn.tcgplayer.com/product/250296_200w.jpg"));
+    
+    // Item 005 — Catan: Cities & Knights Expansion
+    aStore.push(new Store("C391", "Catan: Cities & Knights Expansion", "59.99", "10", "2", "Catan", "5.99", "", "Dark clouds gather over the once peaceful landscape. Wild barbarians, lured by Catan's wealth and power, maneuver to attack. You must be strong! In Catan: Cities & Knights, you engage in the defense of Catan and compete to build the three great metropolises of Catan. '\n' NOTE: This is NOT a complete game; you will need a Catan base game in order to use this expansion!", "https://catanshop.com/images/thumbs/0000391_catan-cities-knights-game-expansion.jpeg"))
+    
+    // Item 006 — Dungeons & Dragons 'Galaxy' Custom Dice Set
+    aStore.push(new Store("D908", "Dungeons & Dragons 'Galaxy' Custom Dice Set", "14.99", "1", "Dungeons & Dragons", "1.99", "", "'Galaxy' custom dice set features semi-translucent dice with every colour and gold pips. '\n' Set includes: D4, D6, D8, D10, D12, and D20 dice, along with a drawstring pouch for storage.", "https://i.etsystatic.com/19854159/r/il/4ce16c/2790820741/il_1588xN.2790820741_d1u2.jpg"));
+    
     // Item 007 — Pokemon Celebrations Zekrom Card
-    aStore.push("P644", "Pokemon Celebrations Zekrom Card", "14.99", "");
-    // Item 008 — Dungeons & Dragons
-    aStore.push("D");
+    aStore.push(new Store("P644", "Pokemon Celebrations Zekrom Card", "14.99", "8", "1", "Pokemon", "0.99", "", "Concealing itself in lightning clouds, it flies throughout the Unova region. It creates electricity in its tail. '\n' This card's Pokedex entry comes from Pokemon Y", "https://tcgplayer-cdn.tcgplayer.com/product/250308_200w.jpg"));
+    /*
+    // Item 008 — Dungeons & Dragons 'Firebolt' Custom Dice Set
+    aStore.push(new Store("D987", "Dungeons & Dragons 'Firebolt' Custom Dice Set", "14.99", "10", "1", "Dungeons & Dragons", "1.99", "", "DESC", "https://i.etsystatic.com/19854159/r/il/75c0a7/3012035267/il_1588xN.3012035267_qi3l.jpg"));
+    /*
     // Item 009 — Catan: 
     aStore.push("C");
     // Item 010 — Pokemon Celebrations Ho-Oh Card
-    aStore.push("P250", "Pokemon Celebrations Ho-Oh Card", "9.99");
+    aStore.push("P250", "Pokemon Celebrations Ho-Oh Card", "9.99", "7", "1", "Pokemon", "0.99", "", "It will reveal itself before a pure-hearted Trainer by shining its bright, rainbow-colored wings. '\n' This card's artwork is part of a joint illustration with Lugia, and its Pokedex entry comes from Pokemon Y.", "https://tcgplayer-cdn.tcgplayer.com/product/250300_200w.jpg");
     // Item 011 — Magic: The Gathering
     aStore.push("M");
-    // Item 012 — Dungeons & Dragons
-    aStore.push("D");
+    // Item 012 — Dungeons & Dragons 'Unicorn Dream' Custom Dice Set
+    aStore.push("D969", "Dungeons & Dragons 'Unicorn Dream' Custom Dice Set", "14.99", "10", "1", "Dungeons & Dragons", "1.99");
     // Item 013 — Catan: 
     aStore.push('C');
-    // Item 014 — Pokemon Celebrations Palkia Card
-    aStore.push("P484", "Pokemon Celebrations Palkia Card", "9.99", "");
-    // Item 015 — Dungeons & Dragons
-    aStore.push("D");
-
+    // Item 014 — Pokemon Celebrations Yveltal Card
+    aStore.push("P717", "Pokemon Celebrations Yveltal Card", "9.99", "9", "1", "Pokemon", "0.99", "", "When its life comes to an end, it absorbs the life energy of every living thing and turns into a cocoon once more. '\n' This card's Pokedex entry comes from Pokemon Y.", "https://tcgplayer-cdn.tcgplayer.com/product/250315_200w.jpg");
+    // Item 015 — Dungeons & Dragons 'Bloodshot' Custom Dice Set
+    aStore.push("D", "Dungeons & Dragons 'Bloodshot' Custom Dice Set", "14.99", "1", "Dungeons & Dragons", "1.99", "", "DESC", "IMAGE SRC");
+    */
     // Log after populating
     console.log(aStore);
 }
