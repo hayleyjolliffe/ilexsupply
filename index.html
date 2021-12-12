@@ -44,8 +44,10 @@
             <a href="/tcgs">TCGs</a>
             <a href="/games">Games</a>
             <a href="/merch">Merch</a>
-            <a href="mailto:h_jolliffe128179@fanshawec.ca">About</a>
+            <a href="/about">About</a>
+            <a href="mailto:h_jolliffe128179@fanshawec.ca">Contact</a>
 
+            <br>
             This is the navbar. (Dead) Links will include: Logo (Home), TCGs, Merch, About, and Contact.
             <br>
             <!-- DATETIME FUNCTION -->
@@ -93,7 +95,11 @@
                 <legend><b>SHOP</b></legend>
 
                 <!-- AVAILABLE ITEMS -->
+                <div id="shopInventory">
 
+                    <!-- GETS POPULATED USING 'DISPLAYITEMS()'-->
+
+                </div>
 
             </fieldset>
             <br><br><br>
@@ -106,13 +112,24 @@
                 
                 <!-- ADD REVIEW -->
                 <b>ADD REVIEW:</b>
+                <br>
+                <label for id="reviewID">Item:</label>
+                <input type="text" id="reviewID" placeholder="Item ID (ie. 'D973')">
+                <br>
+                <label for id="reviewText">Review:</label>
+                <input type="text" id="reviewText" placeholder="Please type your review here.">
+                <!-- HARDCODED REVIEWS -->
+                <br>HARDCODED REVIEWS GO HERE
             </fieldset>
             
             Then we get to the "Reviews" section, where there should be any reviews submitted for available products. Some will be hardcoded in for onload purposes.
             <div class="review">
                 This is an example of a review. Layout will look something like this:
                 <br><br>
-                <b>Review Title</b><br>This is what I think of this item.<br>Item purchased: [ ITEM ]
+                <b>Review Title</b>
+                <br>Item purchased: {item}
+                <br>This is what I think of this item.
+                <br><b>Would recommend? </b>No
             </div>
             <br><br><br>
         </section>
@@ -125,7 +142,12 @@
 
     <!-- CHECKOUT -->
         <section id="checkout">
-            The final section should be the checkout section. This will include all the necessary shipping information, order review, and calculate order total.
+            <fieldset id="checkout">
+                <legend><b>CHECKOUT</b></legend>
+
+                <!-- DISPLAY CART ITEMS -->
+                <div id="displayCart"></div>
+            </fieldset>
         <br><br><br>
         </section>
 
