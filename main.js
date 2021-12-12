@@ -103,7 +103,14 @@ function displayTime()
 */
 function displayItems()
 {
+    // Create temp variable for creating store items
     var divNumber = aStore.length;
+
+    // Creating new elements for store items
+    for (var x = 0; x <= divNumber; x++)
+    {
+        document.createElement("div").className("product");
+    }
 }
 
 // Creating 'function displayCart()'
@@ -193,6 +200,42 @@ function currencySelection()
     dropdown.appendChild(currencyGBP);
 }
 
+// Creating 'function filterItems()'
+/*
+    PARAMETERS:
+    > Attached to '<select id="category">'
+    > On change: filters items by selected category
+*/
+function filterItems()
+{
+    // Collect selected filter
+    var filtered = document.getElementById("category").value;
+
+    // Creating array for filtered items
+    var aFiltered = [];
+
+    // Creating index for filtering items
+    var i = 0;
+
+    // Display ALL products
+    if (filtered == "All")
+    {
+        displayStoreItems(aStore);
+        return;
+    }
+    
+    // Display FILTERED products
+    while (i < aStore.length)
+    {
+        if (aStore[i].category == filtered)
+        {
+            aFiltered.push(aStore[i]);
+        }
+        i++;
+    }
+    displayItems(aFiltered);
+}
+
 // Creating 'function initialize()'
 /*
     PARAMETERS:
@@ -268,7 +311,7 @@ function initialize()
         CALL DISPLAYITEMS()
         Populates the store with items from 'aStore' array
     */
-    displayItems();
+    displayItems(aStore);
 
     /*
         CALL DISPLAYCART()
