@@ -86,6 +86,8 @@ function displayTime()
     var hours = current.getHours();
     var minutes = current.getMinutes();
     var datestamp = (day +  " " + date + " " + month + " " + year + ", " + hours + ":" + minutes);
+    return datestamp;
+    // document.getElementById("ID").innerHTML = datestamp;
 }
 
 // Creating 'function displayItems()'
@@ -219,4 +221,11 @@ function initialize()
     
     // Log after populating
     console.log(aStore);
+
+    
+    /*
+        CALLING DISPLAYTIME()
+    */
+    displayTime();
+
 }
