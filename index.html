@@ -26,7 +26,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="Description" description="Ground Control Coffee Co." content="Concept coffee company website for INFO-1251 & INFO-1272 final project.">
-        <meta name="keywords" content="pokemon, tcg, trading card, nintendo">
+        <meta name="keywords" content="pokemon, tcg, trading card, nintendo, dungeons & dragons, dnd, catan">
+    
+
+        <!-- FONT IMPORT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     
     </head>
 
@@ -34,8 +40,19 @@
         
     <!-- NAV BAR -->
         <nav id="topbar">
-            This is the navbar. (Dead) Links will include: Logo (Home), Coffee, Merch, About, and Contact.
-        <br><br><br>
+            <a href="/"><img src=""></a>
+            <a href="/tcgs">TCGs</a>
+            <a href="/games">Games</a>
+            <a href="/merch">Merch</a>
+            <a href="mailto:h_jolliffe128179@fanshawec.ca">About</a>
+
+            This is the navbar. (Dead) Links will include: Logo (Home), TCGs, Merch, About, and Contact.
+            <br>
+            <!-- DATETIME FUNCTION -->
+            <span id="datetime">
+                DATETIME
+            </span>
+            <br><br><br>
         </nav>
 
     <!-- HERO -->
@@ -44,11 +61,44 @@
         <br><br><br>
         </section>
 
-        <section id="shop">
-            Scrolling down past the "Hero" section, we have the "Shop" section. This will contain the "Shop" header, along with the shop's items, their respective information, as well as the currency selector and filter selector.
-        <br><br><br>
+    <!-- SHOP -->
+        <section id="shop" style="border:1px solid #fafafa">
+        
+            <!-- CATEGORY + CURRENCY SELECTORS -->
+            <div id="selectors">
+                <!-- CURRENCY -->
+                <label for="currency">Select currency:</label>
+                <select id="currency" name="currency" onchange="currencySelection()">
+                    <option value="CAD">$CAD</option>
+                    <option value="USD">$USD</option>
+                    <option value="AUD">$AUD</option>
+                    <option value="EUR">€EUR</option>
+                    <option value="GBP">£GBP</option>
+                </select>
+
+                <br><br>
+
+                <!-- CATEGORY -->
+                <label for="category">Select category:</label>
+                <select id="category" onchange="filterItems()">
+                    <option value="all">All</option>
+                    <option value="pokémon">Pokémon</option>
+                    <option value="dnd">Dungeons & Dragons</option>
+                    <option value="catan">Catan</option>
+                </select>
+            </div> 
+
+            <!-- POPULATING STORE INVENTORY -->
+            <fieldset>
+                <legend>SHOP</legend>
+
+                <!-- AVAILABLE ITEMS -->
+
+            </fieldset>
+            <br><br><br>
         </section>
 
+    <!-- REVIEWS -->
         <section id="reviews">
             Then we get to the "Reviews" section, where there should be any reviews submitted for available products. Some will be hardcoded in for onload purposes.
             <div class="review">
@@ -59,20 +109,20 @@
             <br><br><br>
         </section>
 
+    <!-- CART -->
         <section id="cart">
             The cart section will display all items in the cart in order to review selections and proceed to checkout.
         <br><br><br>
         </section>
 
+    <!-- CHECKOUT -->
         <section id="checkout">
             The final section should be the checkout section. This will include all the necessary shipping information, order review, and calculate order total.
         <br><br><br>
         </section>
 
-        <section>
-            This is the test section. This is a <a>link</a>.
-        </section>
-
+        
+    <!-- JAVASCRIPT -->
         <script src="main.js"></script>
     
     </body>
