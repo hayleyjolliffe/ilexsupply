@@ -103,7 +103,7 @@ function displayTime()
 */
 function displayItems()
 {
-
+    var divNumber = aStore.length;
 }
 
 // Creating 'function displayCart()'
@@ -153,7 +153,44 @@ function calculateCart()
 */
 function currencySelection()
 {
+    // Creating dropdown
+    var dropdown = document.getElementById("currency");
 
+    // Empty dropdown
+    dropdown.innerHTML = "";
+
+    // Setting default option to $CAD
+    var currencyCAD = document.createElement("option");
+    currencyCAD.innerHTML = "$CAD";
+    currencyCAD.value = 1;
+    currencyCAD.selected = true;
+    dropdown.appendChild(currencyCAD);
+
+    // Creating currency options
+    // $USD
+    var currencyUSD = document.createElement("option");
+    currencyUSD.innerHTML = "$USD";
+    currencyUSD.value = 0.79;
+    currencyUSD.selected = false;
+    dropdown.appendChild(currencyUSD);
+    // $AUS
+    var currencyAUD = document.createElement("option");
+    currencyAUD.innerHTML = "$AUD";
+    currencyAUD.value = 1.1;
+    currencyAUD.selected = false;
+    dropdown.appendChild(currencyAUD);
+    // €EUR
+    var currencyEUR = document.createElement("option");
+    currencyEUR.innerHTML = "€EUR";
+    currencyEUR.value = 0.69;
+    currencyEUR.selected = false;
+    dropdown.appendChild(currencyEUR);
+    // £GBP
+    var currencyGBP = document.createElement("option");
+    currencyGBP.innerHTML = "£GBP";
+    currencyGBP.value = 0.59;
+    currencyGBP.selected = false;
+    dropdown.appendChild(currencyGBP);
 }
 
 // Creating 'function initialize()'
