@@ -168,6 +168,11 @@ function currencySelection()
 function initialize()
 {
     /*
+        CALLING DISPLAYTIME()
+    */
+        displayTime();
+    
+    /*
         POPULATING STORE INVENTORY
         Format: new Store(id, n, p, q, m, c, s, r, d, i)
     */
@@ -222,10 +227,15 @@ function initialize()
     // Log after populating
     console.log(aStore);
 
-    
     /*
-        CALLING DISPLAYTIME()
+        CALL DISPLAYITEMS()
+        Populates the store with items from 'aStore' array
     */
-    displayTime();
+    displayItems();
 
+    /*
+        CALL DISPLAYCART()
+        Populates the cart section with 'aCart' array
+    */
+    displayCart();
 }
