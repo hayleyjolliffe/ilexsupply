@@ -15,20 +15,26 @@
 
 --*/
 
-/*-- BODY --*/
+/*-- GLOBALS --*/
 body {
         background-color:#202020;
         color:#fafafa;
-        font-family:Helvetica, sans-serif;
-        font-weight:300;
+        font-family:'Inter', Helvetica, sans-serif;
+        font-weight:400;
         text-decoration:none;
 }
 
 a {
+        color:#fafafa;
         text-decoration:underline;
 }
 
 a:hover {
         color:#999;
         text-decoration:underline;
+}
+
+b {
+        font-family:'Inter', Helvetica, sans-serif;
+        font-weight:600;
 }
