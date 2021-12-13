@@ -100,15 +100,24 @@ function displayTime()
     > Call when page loads (from 'initialize()')
     > Call when user changes the item category
 */
-function displayItems()
+function displayItems(aStore)
 {
-    // Create temp variable for creating store items
-    var divNumber = aStore.length;
+    // Collecting information from the shop elements
+    var divShop = document.getElementById("shopInventory");
 
-    // Creating new elements for store items
-    for (var x = 0; x <= divNumber; x++)
+    // Clear anything currently in the shop area
+    divShop.innerHTML = "";
+
+    // Populate shop with 'aStore' inventory
+    for (var i = 0; i <= aStore.length; i++)
     {
-        document.createElement("div");
+        // Creating temp variable to create item divs
+        var tempDiv = document.createElement("div");
+
+        // Populating inventory details
+        // Populating item IDs
+        var productID;
+
     }
 }
 
