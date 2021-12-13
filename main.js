@@ -124,7 +124,7 @@ function displayItems()
 function displayCart()
 {
     // EMPTY CART
-    if (aCart.length = 0)
+    if (aCart.length == 0)
     {
         document.getElementById("displayCart").innerHTML = "Your cart is empty.";
     }
