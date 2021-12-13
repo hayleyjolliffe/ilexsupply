@@ -114,10 +114,20 @@ function displayItems(aStore)
         // Creating temp variable to create item divs
         var tempDiv = document.createElement("div");
 
+        // Creating item detail container
+        var tempContainer = document.createElement("div");
+        tempContainer.classList = "details";
+
         // Populating inventory details
         // Populating item IDs
-        var productID;
+        var productID = document.createElement("p");
+        productID.innerHTML = "Product ID " + aStore[i].id;
+        tempContainer.appendChild(productID);
 
+        // Populating item NAME
+        var productName = document.createElement("p");
+        productName.innerHTML = aStore[i].n;
+        tempContainer.appendChild(productName);
     }
 }
 
