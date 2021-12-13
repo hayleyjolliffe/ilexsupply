@@ -18,150 +18,286 @@
 <!DOCTYPE html>
 <html lang="en-Us">
 
+    <!-- HEAD START -->
     <head>
-        
+
         <title>Ilex Supply Co.</title>
         <link rel="stylesheet" href="main.css">
 
+        <!-- METAS -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="Description" description="Ground Control Coffee Co." content="Concept coffee company website for INFO-1251 & INFO-1272 final project.">
-        <meta name="keywords" content="pokemon, tcg, trading card, nintendo, dungeons & dragons, dnd, catan, tabletop game">
-    
+        <meta name="Description" description="Ilex Supply Co." content="It's dangerous to go alone. Gear up for your next adventure here. Shop concept for INFO-1251 & INFO-1272 final project.">
+        <meta name="keywords" content="pokemon, catan, dnd, dungeons & dragons, tcg, trading card game, nintendo, tabletop game">
 
         <!-- FONT IMPORT -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    
+
     </head>
+    <!-- HEAD END -->
 
+    <!-- BODY START -->
     <body onload="initialize()">
-        
-    <!-- NAV BAR -->
-        <nav id="topbar">
-            <a href="/"><img src=""></a>
-            <a href="/tcgs">TCGs</a>
-            <a href="/games">Games</a>
-            <a href="/merch">Merch</a>
-            <a href="/about">About</a>
-            <a href="mailto:h_jolliffe128179@fanshawec.ca">Contact</a>
+    
+        <!-- NAV BAR -->
+        <nav id="navbar">
 
-            <br>
-            This is the navbar. (Dead) Links will include: Logo (Home), TCGs, Merch, About, and Contact.
-            <br>
-            <!-- DATETIME FUNCTION -->
-            <div id="datetime">
-                <!-- DATETIME GOES HERE -->
-            </div>
-            <br><br><br>
+            <!-- ICON -->
+            <a href="/index.html">
+                <img src="https://super.so/icon/light/image.svg" alt="Ilex Supply Co. logo">
+            </a>
+            
+            <!-- LINKS -->
+            <ul>
+                
+                <!-- TCGs -->
+                <li><a href="#">TCGs</a></li>
+                
+                <!-- GAMES -->
+                <li><a href="#">Games</a></li>
+                
+                <!-- MERCH -->
+                <li><a href="#">Merch</a></li>
+                
+                <!-- ABOUT -->
+                <li><a href="#">About</a></li>
+                
+                <!-- CONTACT -->
+                <li><a href="mailto:h_jolliffe128179@fanshawec.ca">Contact</a></li>
+
+            </ul>
+            <!-- LINKS END -->
+
+            <!-- TIMESTAMP -->
+            <span id="timestamp">
+                <!-- TIMESTAMP DATA GOES HERE (FROM JS FUNCTION) -->
+            </span>
+
         </nav>
+        <!-- NAV BAR END -->
 
-    <!-- HERO -->
-        <section id="hero" style="border:1px solid #fafafa">
-            This is the hero section
-        </section>
+        <hr>
 
-    <!-- SHOP -->
-        <section id="shop" style="border:1px solid #fafafa">
-        
-            <!-- CATEGORY + CURRENCY SELECTORS -->
-            <div id="selectors">
-                <!-- CURRENCY -->
-                <label for="currency"><b>Currency:</b></label>
-                <select id="currency" name="currency" onchange="currencySelection()">
-                    <option value="CAD">$CAD</option>
-                    <option value="USD">$USD</option>
-                    <option value="AUD">$AUD</option>
-                    <option value="EUR">€EUR</option>
-                    <option value="GBP">£GBP</option>
-                </select>
+        <!-- HERO -->
+        <div id="hero">
 
-                <br>
+            <!-- HERO IMAGE -->
+            <img src="https://super.so/icon/light/image.svg" alt="Hero image.">
+            <b>HERO IMAGE GOES HERE</b>
 
-                <!-- CATEGORY -->
-                <label for="category"><b>Category:</b></label>
-                <select id="category" onchange="filterItems()">
-                    <option value="all">All</option>
-                    <option value="pokémon">Pokémon</option>
-                    <option value="dnd">Dungeons & Dragons</option>
-                    <option value="catan">Catan</option>
-                </select>
-            </div> 
+        </div>
+        <!-- HERO END -->
 
-            <!-- POPULATING STORE INVENTORY -->
+        <hr>
+
+        <!-- SELECTORS -->
+        <fieldset id="filters">
+
+            <!-- FIELDSET NAME -->
+            <legend><b>FILTER ITEMS</b></legend>
+
+            <!-- CURRENCY -->
+            <select id="currencies">
+
+                <!-- CAD (DEFAULT) -->
+                <option value="CAD">$CAD</option>
+
+                <!-- USD -->
+                <option value="USD">$USD</option>
+
+                <!-- AUD -->
+                <option value="AUD">$AUD</option>
+
+                <!-- GBP -->
+                <option value="GBP">£GBP</option>
+
+                <!-- EUR -->
+                <option value="EUR">€EUR</option>
+
+            </select>
+
+            <!-- CATEGORY -->
+            <select id="categories">
+
+                <!-- ALL -->
+                <option value="all">All</option>
+
+                <!-- CATAN -->
+                <option value="catan">Catan</option>
+
+                <!-- DUNGEONS & DRAGONS -->
+                <option value="dnd">Dungeons & Dragons</option>
+
+                <!-- POKEMON -->
+                <option value="pokemon">Pokemon</option>
+
+            </select>
+
+        </fieldset>
+        <!-- SELECTORS END -->
+
+        <hr>
+
+        <!-- PRODUCTS -->
+        <div id="products">
+
+            <!-- PRODUCT OUTPUT -->
             <fieldset>
-                <legend><b>SHOP</b></legend>
 
-                <!-- AVAILABLE ITEMS -->
-                <div id="shopInventory">
+                <!-- FIELDSET NAME -->
+                <legend><b>PRODUCTS</b></legend>
+                
+                <!-- TABLE -->
+                <table id="productTable">
 
-                    <!-- GETS POPULATED USING 'DISPLAYITEMS()'-->
+                    <tbody>
 
-                </div>
+                        <!-- POPULATE TABLE IN JS -->
+
+                    </tbody>
+
+                </table>
 
             </fieldset>
-            <br><br><br>
-        </section>
 
-    <!-- REVIEWS -->
-        <section id="reviews">
-            <fieldset id="submitReview">
+        </div>
+        <!-- PRODUCTS END -->
+
+        <hr>
+
+        <!-- REVIEWS -->
+        <div id="reviews">
+
+            <fieldset>
+
+                <!-- FIELDSET NAME -->
                 <legend><b>REVIEWS</b></legend>
+
+                <!-- SUBMIT REVIEW -->
+                <fieldset id="submit">
+
+                    <!-- FIELDSET NAME -->
+                    <legend><b>SUBMIT REVIEW</b></legend>
+
+                    <!-- PRODUCT ID INPUT -->
+                    <label for id="reviewProduct">Product ID:</label>
+                    <input type="text" placeholder="Item ID (ie. 'D973')">
+
+                    <br>
+
+                    <!-- TITLE INPUT -->
+                    <label for id="reviewTitle">Title:</label>
+                    <input type="text" placeholder="Title your review here.">
+
+                    <br>
+
+                    <!-- REVIEW INPUT -->
+                    <label for id="reviewText">Review:</label>
+                    <input type="text" placeholder="Type your review here.">
                 
-                <!-- ADD REVIEW -->
-                <b>ADD REVIEW:</b>
+                </fieldset>
+                <!-- SUBMIT REVIEW END -->
+
                 <br>
-                <label for id="reviewID">Item:</label>
-                <input type="text" id="reviewID" placeholder="Item ID (ie. 'D973')">
-                <br>
-                <label for id="reviewTitle">Title:</label>
-                <input type="text" id="reviewTitle" placeholder="Title your review here.">
-                <br>
-                <label for id="reviewText">Review:</label>
-                <input type="text" id="reviewText" placeholder="Type your review here.">
-                <hr>
+
                 <!-- HARDCODED REVIEWS -->
                 <div class="review">
-                    <b>(Who's that Pokemon?) It's Pikachu!</b>
-                    <br>Made me think of that Tiktok. I got the fat Pikachu full art card. The real deal. It's pretty dope.
-                    <br><b>Item purchased: </b>Pokemon Celebrations: Pikachu Full Art Card
-                    <br><b>Would recommend? </b> YES x1000
-                </div>
-                <br><br>
-                <div class="review">
-                    <b>FAKE FAKE FAKE</b>
-                    <br>MY 5 YEAR OLD SON KNOWS WHAT A REAL POKEMON CARD LOOKS LIKE AND HE SAYS ITS FAKE.
-                    <br><b>Not a verified purchase.</b>
-                    <br><b>Would recommend? </b>NO THE CARD WAS FAKE!!!!!!!!!!!!!
-                </div>
-            </fieldset>
-        </section>
 
-    <!-- CART -->
-        <section id="cart">
-            <fieldset id="cart">
+                    <!-- REVIEW TITLE -->
+                    <b>(Who's that Pokemon?) It's Pikachu!</b>
+
+                    <!-- REVIEW TEXT -->
+                    <p>
+                        Made me think of that Tiktok. I got the fat Pikachu full art card. The real deal—it's pretty dope.
+                    </p>
+
+                    <!-- PRODUCT -->
+                    <b>Product purchased: </b>
+                    Pokemon Celebrations: Pikachu Full Art Card
+
+                </div>
+
+                <hr>
+
+                <div class="review">
+
+                    <!-- REVIEW TITLE -->
+                    <b>FAKE FAKE FAKE</b>
+
+                    <!-- REVIEW TEXT -->
+                    <p>
+                        MY 5 YEAR OLD SON KNOWS WHAT A REAL POKEMON CARD LOOKS LIKE AND HE SAYS IT LOOKS FAKE. THIS IS A SCAM!!!
+                    </p>
+
+                    <!-- PRODUCT -->
+                    <b>Not a verified purchase.</b>
+                    
+                </div>
+
+            </fieldset>
+
+        </div>
+        <!-- REVIEWS END -->
+
+        <hr>
+
+        <!-- CART -->
+        <div id="cart">
+
+            <fieldset>
+
+                <!-- FIELDSET TITLE -->
                 <legend><b>CART</b></legend>
 
-                <!-- DISPLAY CART ITEMS -->
+                <!-- CART DISPLAY -->
                 <div id="displayCart">
 
-                </div>
-            </fieldset>
-        </section>
+                    <!-- DISPLAY USING JS -->
 
-    <!-- CHECKOUT -->
-        <section id="checkout">
-            <fieldset id="checkout">
+                </div>
+
+            </fieldset>
+
+        </div>
+        <!-- CART END -->
+
+        <hr>
+
+        <!-- CHECKOUT -->
+        <div id="checkout">
+
+            <fieldset id="displayCheckout">
+
+                <!-- FIELDSET TITLE -->
                 <legend><b>CHECKOUT</b></legend>
 
+                <div id="shipping">
+
+                    <!-- DISPLAY SHIPPING INFO USING JS -->
+
+                </div>
+
             </fieldset>
-        </section>
+
+        </div>
+        <!-- CHECKOUT END -->
+
+        <hr>
+
+        <!-- FOOTER -->
+        <div id="footer">
+
+            2021 Ilex Supply Co. — INFO-1251 & INFO-1272 Final Project by <a href="https://twitter.com/hayleyjolliffe">Hayley Jolliffe</a>
+            
+        </div>
+        <!-- FOOTER END -->
 
 
-    <!-- JAVASCRIPT -->
+        <!-- JAVASCRIPT -->
         <script src="main.js"></script>
-    
+
     </body>
-    
+
 </html>
