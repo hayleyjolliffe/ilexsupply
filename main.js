@@ -85,8 +85,8 @@ function displayTime()
     var year = current.getFullYear();
     var hours = current.getHours();
     var minutes = current.getMinutes();
-    var datestamp = (day +  " " + date + " " + month + " " + year + ", " + hours + ":" + minutes);
-    document.getElementById("datetime").innerHTML = datestamp;
+    var timestamp = (day +  " " + date + " " + month + " " + year + ", " + hours + ":" + minutes);
+    document.getElementById("timestamp").innerHTML = timestamp;
 }
 
 // Creating 'function displayItems()'
@@ -213,8 +213,23 @@ function calculateCart()
 */
 function currencySelection()
 {
+    // Pulling data from dropdown
+    var currency = document.getElementById("currencies").value;
+
+    // $CAD
+    if (currency == "$CAD")
+    {
+
+    }
+
+    // $USD
+    else if (currency == "$USD")
+    {
+        
+    }
+    
     // Creating dropdown
-    var dropdown = document.getElementById("currency");
+    var dropdown = document.getElementById("currencies");
 
     // Empty dropdown
     dropdown.innerHTML = "";
