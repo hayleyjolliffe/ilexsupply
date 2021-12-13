@@ -128,6 +128,29 @@ function displayItems(aStore)
         var productName = document.createElement("p");
         productName.innerHTML = aStore[i].n;
         tempContainer.appendChild(productName);
+
+        // Populating item PRICE
+        var productPrice = document.createElement("p");
+        productPrice.innerHTML = aStore[i].p;
+        tempContainer.appendChild(productPrice);
+
+        // Populating item STOCK
+        var productStock = document.createElement("p");
+        productStock.innerHTML = aStore[i].q;
+        tempContainer.appendChild(productStock);
+
+        // Populating item DETAILS
+        var productDetails = document.createElement("p");
+        productDetails.innerHTML = aStore[i].d;
+        tempContainer.appendChild(productDetails);
+
+        // Populating item IMAGE
+        var productImage = document.createElement("img");
+        productImage.src = aStore[i].i;
+        tempContainer.appendChild(productImage);
+
+        // Appending elements
+        tempDiv.appendChild(tempContainer);
     }
 }
 
@@ -347,5 +370,5 @@ function initialize()
         CALL DISPLAYCART()
         Populates the cart section with 'aCart' array
     */
-    displayCart();
+    displayCart(aCart);
 }
