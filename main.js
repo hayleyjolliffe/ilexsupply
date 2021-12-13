@@ -86,8 +86,7 @@ function displayTime()
     var hours = current.getHours();
     var minutes = current.getMinutes();
     var datestamp = (day +  " " + date + " " + month + " " + year + ", " + hours + ":" + minutes);
-    return datestamp;
-    // document.getElementById("ID").innerHTML = datestamp;
+    document.getElementById("datetime").innerHTML = datestamp;
 }
 
 // Creating 'function displayItems()'
@@ -109,7 +108,7 @@ function displayItems()
     // Creating new elements for store items
     for (var x = 0; x <= divNumber; x++)
     {
-        document.createElement("div").className("product");
+        document.createElement("div");
     }
 }
 
@@ -124,7 +123,15 @@ function displayItems()
 */
 function displayCart()
 {
-
+    // EMPTY CART
+    if (aCart.length = 0)
+    {
+        document.getElementById("displayCart").innerHTML = "Your cart is empty.";
+    }
+    else
+    {
+        document.getElementById("displayCart").innerHTML = aCart;
+    }
 }
 
 // Creating 'function calculateCart()'
@@ -143,7 +150,11 @@ function displayCart()
 */
 function calculateCart()
 {
-
+    // Fun free shipping perk
+    if (subtotal >= 50)
+    {
+        shipping = 0;
+    }
 }
 
 // Creating 'function currencySelection()'
@@ -180,7 +191,7 @@ function currencySelection()
     currencyUSD.value = 0.79;
     currencyUSD.selected = false;
     dropdown.appendChild(currencyUSD);
-    // $AUS
+    // $AUD
     var currencyAUD = document.createElement("option");
     currencyAUD.innerHTML = "$AUD";
     currencyAUD.value = 1.1;
