@@ -38,3 +38,80 @@ b {
         font-family:'Inter', Helvetica, sans-serif;
         font-weight:600;
 }
+
+ul {
+
+}
+
+li {
+
+}
+
+
+
+/*-- SECTIONS --*/
+
+/* NAV */
+#navbar {
+        font-family:'Inter', Helvetica, sans-serif;
+}
+
+
+/* TIMESTAMP */
+#timestamp {
+        
+}
+
+
+/* HERO */
+#hero {
+
+}
+
+
+/* SELECTORS */
+#filters {
+
+}
+
+
+/* SHOP */
+#products {
+
+}
+
+
+/* REVIEWS */
+#reviews {
+
+}
+
+.review {
+
+}
+
+
+/* CART */
+#cart {
+
+}
+
+#displayCart {
+
+}
+
+
+/* CHECKOUT */
+#checkout {
+
+}
+
+#checkoutDisplay {
+
+}
+
+
+/* FOOTER */
+#footer {
+        
+}
