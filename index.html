@@ -36,7 +36,7 @@
     
     </head>
 
-    <body>
+    <body onload="initialize()">
         
     <!-- NAV BAR -->
         <nav id="topbar">
@@ -51,9 +51,9 @@
             This is the navbar. (Dead) Links will include: Logo (Home), TCGs, Merch, About, and Contact.
             <br>
             <!-- DATETIME FUNCTION -->
-            <span id="datetime">
-                DATETIME
-            </span>
+            <div id="datetime">
+                <!-- DATETIME GOES HERE -->
+            </div>
             <br><br><br>
         </nav>
 
@@ -116,28 +116,39 @@
                 <label for id="reviewID">Item:</label>
                 <input type="text" id="reviewID" placeholder="Item ID (ie. 'D973')">
                 <br>
+                <label for id="reviewTitle">Title:</label>
+                <input type="text" id="reviewTitle" placeholder="Title your review here.">
+                <br>
                 <label for id="reviewText">Review:</label>
-                <input type="text" id="reviewText" placeholder="Please type your review here.">
+                <input type="text" id="reviewText" placeholder="Type your review here.">
+                <hr>
                 <!-- HARDCODED REVIEWS -->
-                <br>HARDCODED REVIEWS GO HERE
-            </fieldset>
-            
-            Then we get to the "Reviews" section, where there should be any reviews submitted for available products. Some will be hardcoded in for onload purposes.
-            <div class="review">
-                This is an example of a review. Layout will look something like this:
+                <div class="review">
+                    <b>(Who's that Pokemon?) It's Pikachu!</b>
+                    <br>Made me think of that Tiktok. I got the fat Pikachu full art card. The real deal. It's pretty dope.
+                    <br><b>Item purchased: </b>Pokemon Celebrations: Pikachu Full Art Card
+                    <br><b>Would recommend? </b> YES x1000
+                </div>
                 <br><br>
-                <b>Review Title</b>
-                <br>Item purchased: {item}
-                <br>This is what I think of this item.
-                <br><b>Would recommend? </b>No
-            </div>
-            <br><br><br>
+                <div class="review">
+                    <b>FAKE FAKE FAKE</b>
+                    <br>MY 5 YEAR OLD SON KNOWS WHAT A REAL POKEMON CARD LOOKS LIKE AND HE SAYS ITS FAKE.
+                    <br><b>Not a verified purchase.</b>
+                    <br><b>Would recommend? </b>NO THE CARD WAS FAKE!!!!!!!!!!!!!
+                </div>
+            </fieldset>
         </section>
 
     <!-- CART -->
         <section id="cart">
-            The cart section will display all items in the cart in order to review selections and proceed to checkout.
-        <br><br><br>
+            <fieldset id="cart">
+                <legend><b>CART</b></legend>
+
+                <!-- DISPLAY CART ITEMS -->
+                <div id="displayCart">
+
+                </div>
+            </fieldset>
         </section>
 
     <!-- CHECKOUT -->
@@ -145,10 +156,7 @@
             <fieldset id="checkout">
                 <legend><b>CHECKOUT</b></legend>
 
-                <!-- DISPLAY CART ITEMS -->
-                <div id="displayCart"></div>
             </fieldset>
-        <br><br><br>
         </section>
 
 
