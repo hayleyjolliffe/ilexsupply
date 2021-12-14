@@ -308,26 +308,30 @@ function currencySelection()
     // $USD
     else if (currency == "$USD")
     {
-        value = 0.79;
+        value = 0.78;
     }
 
     // $AUD
     else if (currency == "$AUD")
     {
-        value;
+        value = 1.1;
     }
 
     // GBP
-    else if (currency == "GBP")
+    else if (currency == "£GBP")
     {
-        value;
+        value = 0.59;
     }
 
     // EUR
-    else if (currency == "EUR")
+    else if (currency == "€EUR")
     {
-        value;
+        value = 0.69;
     }
+
+    // Refresh displays
+    displayProducts();
+    displayCart();
 }
 
 
