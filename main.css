@@ -65,7 +65,7 @@ li {
 
 /* HERO */
 #hero {
-
+        width:100vw;
 }
 
 
@@ -115,3 +115,6 @@ li {
 #footer {
         
 }
+
+
+/* MEDIA QUERIES */
