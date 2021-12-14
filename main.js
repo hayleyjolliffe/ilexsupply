@@ -334,7 +334,42 @@ function currencySelection()
 // Creating 'function removeCart()'
 function removeCart()
 {
-    // TO DO STILL
+    // Collect data
+    var removeInput = document.getElementById("inputID");
+    var removeProduct = document.getElementById("inputID").value;
+    var removeQuantity = document.getElementById("inputQuantity").value;
+
+    removeQuantity = parseInt(removeQuantity);
+
+    // Clear input value
+    removeInput = "";
+
+    // Remove product
+    var iRemoveProduct = 0;
+
+    // Validating input ID
+    for (var i = 0; i < aCart.length; i++)
+    {
+        // Creating temp variables
+        var product;
+
+        if(aCart[i].id == iRemoveProduct)
+        {
+            iRemoveProduct = i;
+        }
+    }
+
+    // Validating input quantity
+    for (var i = 0; i < aStore.length; i++)
+    {
+        // Creating temp variables
+        var quantity;
+
+        if (aCart[i].id == iRemoveProduct)
+        {
+            // NEED TO FINISH STILL
+        }
+    }
 }
 
 
@@ -360,6 +395,7 @@ function submitReview()
 
             // Populating data to append
             
+            // NEED TO FINISH THE FUNCTION
 
         }
     }
