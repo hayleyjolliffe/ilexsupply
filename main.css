@@ -17,15 +17,15 @@
 
 /*-- GLOBALS --*/
 body {
-        background-color:#202020;
-        color:#fafafa;
+        background-color:#fafafa;
+        color:#202020;
         font-family:'Inter', Helvetica, sans-serif;
         font-weight:400;
         text-decoration:none;
 }
 
 a {
-        color:#fafafa;
+        color:#202020;
         text-decoration:underline;
 }
 
