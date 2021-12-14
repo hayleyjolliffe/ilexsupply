@@ -77,16 +77,22 @@ li {
 /* HERO */
 #hero {
         width:100vw;
-        background-image:url('');
+        height:25vh;
+        background-image:url('https://imgr.search.brave.com/jEo5WmGzOvdVtLea8WkzxQd8kLb_0dkHZBE6HQR4mgA/fit/1200/1080/ce/1/aHR0cDovL3dhbGxw/YXBlcmNhdmUuY29t/L3dwL1ljdjVyNnYu/anBn');
+        background-size:100vw;
+        background-position:100%;
+        margin:0 auto;
 }
 
 #heroText {
+        color:#fafafa;
         font-size:32px;
         font-weight:600;
         line-height:120%;
-        text-align:left;
+        width:50vw;
+        text-align:center;
         margin:0 auto;
-        padding:5px;
+        padding-top:50px;
 }
 
 
