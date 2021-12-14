@@ -221,11 +221,8 @@ function addCart()
     > Call when page loads (from 'initialize()')
     > Call when user changes the item category
 */
-function displayProducts(aStore)
+function displayProducts()
 {
-    
-
-    
     // Collecting information from the shop elements
     var divProducts = document.getElementById("shopInventory");
 
