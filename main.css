@@ -68,13 +68,16 @@ li {
 
 /* TIMESTAMP */
 #timestamp {
-
+        font-weight:400;
+        font-size:12px;
+        text-decoration:none;
 }
 
 
 /* HERO */
 #hero {
         width:100vw;
+        background-image:url('');
 }
 
 #heroText {
@@ -90,6 +93,11 @@ li {
 /* SELECTORS */
 #filters {
 
+}
+
+.filters {
+        background-color:#fafafa;
+        border:1px solid #202020;
 }
 
 
