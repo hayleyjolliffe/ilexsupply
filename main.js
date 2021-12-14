@@ -46,9 +46,10 @@ function Cart(i, p, q, s)
     this.shipping = s;              // Float
 }
 
+
 /*
 
-    GLOBAL VARIABLES
+    GLOBALS
 
 */
 // Creating 'aStore' to hold the store's items
@@ -63,13 +64,13 @@ var aDays = ["Sun.", "Mon.", "Tue.", "Wed.", "Thu.", "Fri.", "Sat."];
 // Creating 'aMonths' to store the months for the timestamp function
 var aMonths = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.", "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."];
 
+
 /*
 
     FUNCTIONS
 
 */
-
-// Creating 'function displayTime()'
+// Creating 'function datetime()'
 /*
     PARAMETERS:
     > Displays current date/time
@@ -89,220 +90,6 @@ function displayTime()
     document.getElementById("timestamp").innerHTML = timestamp;
 }
 
-// Creating 'function displayItems()'
-/*
-    PARAMETERS:
-    > 'Display the store items array in a dynamically generated table'
-       (or something similar, like a card-grid system)
-    > Properties to display: id, name, price, quantity on hand, max per
-      customer, category, image
-    > Price displayed using selected currency (Step 7)
-    > Call when page loads (from 'initialize()')
-    > Call when user changes the item category
-*/
-function displayItems(aStore)
-{
-    // Collecting information from the shop elements
-    var divShop = document.getElementById("shopInventory");
-
-    // Clear anything currently in the shop area
-    divShop.innerHTML = "";
-
-    // Populate shop with 'aStore' inventory
-    for (var i = 0; i <= aStore.length; i++)
-    {
-        // Creating temp variable to create item divs
-        var tempDiv = document.createElement("div");
-
-        // Creating item detail container
-        var tempContainer = document.createElement("div");
-        tempContainer.classList = "details";
-
-        // Populating inventory details
-        // Populating item IDs
-        var productID = document.createElement("p");
-        productID.innerHTML = "Product ID " + aStore[i].id;
-        tempContainer.appendChild(productID);
-
-        // Populating item NAME
-        var productName = document.createElement("p");
-        productName.innerHTML = aStore[i].n;
-        tempContainer.appendChild(productName);
-
-        // Populating item PRICE
-        var productPrice = document.createElement("p");
-        productPrice.innerHTML = aStore[i].p;
-        tempContainer.appendChild(productPrice);
-
-        // Populating item STOCK
-        var productStock = document.createElement("p");
-        productStock.innerHTML = aStore[i].q;
-        tempContainer.appendChild(productStock);
-
-        // Populating item DETAILS
-        var productDetails = document.createElement("p");
-        productDetails.innerHTML = aStore[i].d;
-        tempContainer.appendChild(productDetails);
-
-        // Populating item IMAGE
-        var productImage = document.createElement("img");
-        productImage.src = aStore[i].i;
-        tempContainer.appendChild(productImage);
-
-        // Appending elements
-        tempDiv.appendChild(tempContainer);
-    }
-}
-
-// Creating 'function displayCart()'
-/*
-    PARAMETERS:
-    > 'Display the cart items array'
-    > Call when user adds/removes items from the cart
-    > Output "No items in cart" if nothing is in the cart
-    > Output for each item: [id, price, quantity, (price * qty)]
-    > Displayed using selected currency
-*/
-function displayCart()
-{
-    // EMPTY CART
-    if (aCart.length == 0)
-    {
-        document.getElementById("displayCart").innerHTML = "Your cart is empty.";
-    }
-    else
-    {
-        document.getElementById("displayCart").innerHTML = aCart;
-    }
-}
-
-// Creating 'function calculateCart()'
-/*
-    PARAMETERS:
-    > 'Create a function that will calculate and display the totals for
-       the orders in the cart
-    > Output the SUBTOTAL of the cart
-    > Output the estimated shipping
-    > Output the SUBTOTAL, including shipping
-    > Output the tax
-    > Output the TOTAL (Subtotal + tax)
-    > Prices displayed using the selected currency
-    NOTE: You can use Canadian tax (13%), even if selected currency is not
-          CAD. Shipping cost can be the sum of each item's shipping cost.
-*/
-function calculateCart()
-{
-    // Fun free shipping perk
-    if (subtotal >= 50)
-    {
-        shipping = 0;
-    }
-}
-
-// Creating 'function currencySelection()'
-/*
-    PARAMETERS:
-    > 'There should be an element on the page for the user to select their
-       preferred currency
-    > 'The selected currency should be displayed/used throughout the webpage.
-       Wherever a price is displayed, it is converted to the currency selected
-       when it is displayed.
-    > The currencies are: Canadian (default), and an additional currency of
-      your choice
-    HINT: This could be a function that you call whenever you display a price.
-*/
-function currencySelection()
-{
-    // Pulling data from dropdown
-    var currency = document.getElementById("currencies").value;
-
-    // $CAD
-    if (currency == "$CAD")
-    {
-
-    }
-
-    // $USD
-    else if (currency == "$USD")
-    {
-        
-    }
-    
-    // Creating dropdown
-    var dropdown = document.getElementById("currencies");
-
-    // Empty dropdown
-    dropdown.innerHTML = "";
-
-    // Setting default option to $CAD
-    var currencyCAD = document.createElement("option");
-    currencyCAD.innerHTML = "$CAD";
-    currencyCAD.value = 1;
-    currencyCAD.selected = true;
-    dropdown.appendChild(currencyCAD);
-
-    // Creating currency options
-    // $USD
-    var currencyUSD = document.createElement("option");
-    currencyUSD.innerHTML = "$USD";
-    currencyUSD.value = 0.79;
-    currencyUSD.selected = false;
-    dropdown.appendChild(currencyUSD);
-    // $AUD
-    var currencyAUD = document.createElement("option");
-    currencyAUD.innerHTML = "$AUD";
-    currencyAUD.value = 1.1;
-    currencyAUD.selected = false;
-    dropdown.appendChild(currencyAUD);
-    // €EUR
-    var currencyEUR = document.createElement("option");
-    currencyEUR.innerHTML = "€EUR";
-    currencyEUR.value = 0.69;
-    currencyEUR.selected = false;
-    dropdown.appendChild(currencyEUR);
-    // £GBP
-    var currencyGBP = document.createElement("option");
-    currencyGBP.innerHTML = "£GBP";
-    currencyGBP.value = 0.59;
-    currencyGBP.selected = false;
-    dropdown.appendChild(currencyGBP);
-}
-
-// Creating 'function filterItems()'
-/*
-    PARAMETERS:
-    > Attached to '<select id="category">'
-    > On change: filters items by selected category
-*/
-function filterItems()
-{
-    // Collect selected filter
-    var filtered = document.getElementById("category").value;
-
-    // Creating array for filtered items
-    var aFiltered = [];
-
-    // Creating index for filtering items
-    var i = 0;
-
-    // Display ALL products
-    if (filtered == "All")
-    {
-        displayStoreItems(aStore);
-        return;
-    }
-    
-    // Display FILTERED products
-    while (i < aStore.length)
-    {
-        if (aStore[i].category == filtered)
-        {
-            aFiltered.push(aStore[i]);
-        }
-        i++;
-    }
-    displayItems(aFiltered);
-}
 
 // Creating 'function initialize()'
 /*
@@ -386,4 +173,183 @@ function initialize()
         Populates the cart section with 'aCart' array
     */
     displayCart(aCart);
+}
+
+
+// Creating 'displayCart'
+/*
+    PARAMETERS:
+    > 'Display the cart items array'
+    > Call when user adds/removes items from the cart
+    > Output "No items in cart" if nothing is in the cart
+    > Output for each item: [id, price, quantity, (price * qty)]
+    > Displayed using selected currency
+*/
+function displayCart()
+{
+    // TO DO STILL
+}
+
+
+// Creating 'function addCart()'
+function addCart()
+{
+    // TO DO STILL
+}
+
+
+// Creating 'function displayItems()'
+/*
+    PARAMETERS:
+    > 'Display the store items array in a dynamically generated table'
+       (or something similar, like a card-grid system)
+    > Properties to display: id, name, price, quantity on hand, max per
+      customer, category, image
+    > Price displayed using selected currency (Step 7)
+    > Call when page loads (from 'initialize()')
+    > Call when user changes the item category
+*/
+function displayItems(aStore)
+{
+    // Collecting information from the shop elements
+    var divShop = document.getElementById("shopInventory");
+
+    // Clear anything currently in the shop area
+    divShop.innerHTML = "";
+
+    // Populate shop with 'aStore' inventory
+    for (var i = 0; i <= aStore.length; i++)
+    {
+        // Creating temp variable to create item divs
+        var tempDiv = document.createElement("div");
+
+        // Creating item detail container
+        var tempContainer = document.createElement("div");
+        tempContainer.classList = "details";
+
+        // Populating inventory details
+        // Populating item IDs
+        var productID = document.createElement("p");
+        productID.innerHTML = "Product ID " + aStore[i].id;
+        tempContainer.appendChild(productID);
+
+        // Populating item NAME
+        var productName = document.createElement("p");
+        productName.innerHTML = aStore[i].n;
+        tempContainer.appendChild(productName);
+
+        // Populating item PRICE
+        var productPrice = document.createElement("p");
+        productPrice.innerHTML = aStore[i].p;
+        tempContainer.appendChild(productPrice);
+
+        // Populating item STOCK
+        var productStock = document.createElement("p");
+        productStock.innerHTML = aStore[i].q;
+        tempContainer.appendChild(productStock);
+
+        // Populating item DETAILS
+        var productDetails = document.createElement("p");
+        productDetails.innerHTML = aStore[i].d;
+        tempContainer.appendChild(productDetails);
+
+        // Populating item IMAGE
+        var productImage = document.createElement("img");
+        productImage.src = aStore[i].i;
+        tempContainer.appendChild(productImage);
+
+        // Appending elements
+        tempDiv.appendChild(tempContainer);
+    }
+}
+
+
+// Creating 'function currencySelection()'
+/*
+    PARAMETERS:
+    > 'There should be an element on the page for the user to select their
+       preferred currency
+    > 'The selected currency should be displayed/used throughout the webpage.
+       Wherever a price is displayed, it is converted to the currency selected
+       when it is displayed.
+    > The currencies are: Canadian (default), and an additional currency of
+      your choice
+    HINT: This could be a function that you call whenever you display a price.
+*/
+function currencySelection()
+{
+    // Pulling data from dropdown
+    var currency = document.getElementById("currencies").value;
+
+    // $CAD
+    if (currency == "$CAD")
+    {
+
+    }
+
+    // $USD
+    else if (currency == "$USD")
+    {
+        
+    }
+    
+    // Creating dropdown
+    var dropdown = document.getElementById("currencies");
+
+    // Empty dropdown
+    dropdown.innerHTML = "";
+
+    // Setting default option to $CAD
+    var currencyCAD = document.createElement("option");
+    currencyCAD.innerHTML = "$CAD";
+    currencyCAD.value = 1;
+    currencyCAD.selected = true;
+    dropdown.appendChild(currencyCAD);
+
+    // Creating currency options
+    // $USD
+    var currencyUSD = document.createElement("option");
+    currencyUSD.innerHTML = "$USD";
+    currencyUSD.value = 0.79;
+    currencyUSD.selected = false;
+    dropdown.appendChild(currencyUSD);
+    // $AUD
+    var currencyAUD = document.createElement("option");
+    currencyAUD.innerHTML = "$AUD";
+    currencyAUD.value = 1.1;
+    currencyAUD.selected = false;
+    dropdown.appendChild(currencyAUD);
+    // €EUR
+    var currencyEUR = document.createElement("option");
+    currencyEUR.innerHTML = "€EUR";
+    currencyEUR.value = 0.69;
+    currencyEUR.selected = false;
+    dropdown.appendChild(currencyEUR);
+    // £GBP
+    var currencyGBP = document.createElement("option");
+    currencyGBP.innerHTML = "£GBP";
+    currencyGBP.value = 0.59;
+    currencyGBP.selected = false;
+    dropdown.appendChild(currencyGBP);
+}
+
+
+// Creating 'function removeCart()'
+function removeCart()
+{
+    // TO DO STILL
+}
+
+
+// Creating 'function submitReview()'
+function submitReview()
+{
+
+}
+
+
+// Creating 'function filter()'
+function filter()
+{
+    
 }
