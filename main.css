@@ -61,6 +61,8 @@ li {
 
 /* NAV */
 #navbar {
+        width:100vw;
+        height:10vh;
         font-weight:600;
         list-style:none;
 }
@@ -147,8 +149,11 @@ li {
 
 /* FOOTER */
 #footer {
+     background-color:#083a1e;
+     color:#fafafa;
      font-weight:600;
-     width:100vw;  
+     width:100vw; 
+     height:25vh; 
 }
 
 
