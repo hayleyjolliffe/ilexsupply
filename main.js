@@ -187,7 +187,19 @@ function initialize()
 */
 function displayCart()
 {
-    // TO DO STILL
+    // Creating variables for shipping
+    var subtotal = 0;
+    subtotal = parseFloat(subtotal);
+    var shipping = 0;
+    shipping = parseFloat(shipping);
+    var tax = 0;
+    tax = parseFloat(tax);
+    var total = 0;
+    total = parseFloat(total);
+
+    // Setting up + clearing the div
+    var product = document.getElementById("product");
+    product.innerHTML = "";
 }
 
 
@@ -211,6 +223,9 @@ function addCart()
 */
 function displayItems(aStore)
 {
+    
+
+    
     // Collecting information from the shop elements
     var divShop = document.getElementById("shopInventory");
 
@@ -278,59 +293,41 @@ function displayItems(aStore)
 */
 function currencySelection()
 {
+    // Creating initial currency value
+    var value = 1;
+    
     // Pulling data from dropdown
     var currency = document.getElementById("currencies").value;
 
     // $CAD
     if (currency == "$CAD")
     {
-
+        value = 1;
     }
 
     // $USD
     else if (currency == "$USD")
     {
-        
+        value = 0.79;
     }
-    
-    // Creating dropdown
-    var dropdown = document.getElementById("currencies");
 
-    // Empty dropdown
-    dropdown.innerHTML = "";
-
-    // Setting default option to $CAD
-    var currencyCAD = document.createElement("option");
-    currencyCAD.innerHTML = "$CAD";
-    currencyCAD.value = 1;
-    currencyCAD.selected = true;
-    dropdown.appendChild(currencyCAD);
-
-    // Creating currency options
-    // $USD
-    var currencyUSD = document.createElement("option");
-    currencyUSD.innerHTML = "$USD";
-    currencyUSD.value = 0.79;
-    currencyUSD.selected = false;
-    dropdown.appendChild(currencyUSD);
     // $AUD
-    var currencyAUD = document.createElement("option");
-    currencyAUD.innerHTML = "$AUD";
-    currencyAUD.value = 1.1;
-    currencyAUD.selected = false;
-    dropdown.appendChild(currencyAUD);
-    // €EUR
-    var currencyEUR = document.createElement("option");
-    currencyEUR.innerHTML = "€EUR";
-    currencyEUR.value = 0.69;
-    currencyEUR.selected = false;
-    dropdown.appendChild(currencyEUR);
-    // £GBP
-    var currencyGBP = document.createElement("option");
-    currencyGBP.innerHTML = "£GBP";
-    currencyGBP.value = 0.59;
-    currencyGBP.selected = false;
-    dropdown.appendChild(currencyGBP);
+    else if (currency == "$AUD")
+    {
+        value;
+    }
+
+    // GBP
+    else if (currency == "GBP")
+    {
+        value;
+    }
+
+    // EUR
+    else if (currency == "EUR")
+    {
+        value;
+    }
 }
 
 
@@ -344,12 +341,12 @@ function removeCart()
 // Creating 'function submitReview()'
 function submitReview()
 {
-
+    // TO DO STILL
 }
 
 
 // Creating 'function filter()'
 function filter()
 {
-    
+    // TO DO STILL
 }
