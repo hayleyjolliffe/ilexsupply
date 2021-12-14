@@ -210,7 +210,7 @@ function addCart()
 }
 
 
-// Creating 'function displayItems()'
+// Creating 'function displayProducts()'
 /*
     PARAMETERS:
     > 'Display the store items array in a dynamically generated table'
@@ -221,7 +221,7 @@ function addCart()
     > Call when page loads (from 'initialize()')
     > Call when user changes the item category
 */
-function displayItems(aStore)
+function displayProducts(aStore)
 {
     
 
@@ -351,28 +351,20 @@ function filter()
     // Collect category filter
     var filter = document.getElementById("categories").value;
 
+    // Creating temp variables for filtered products
+    var aFiltered = [];
+    var i = 0;
+
     // Filter products
     // All
     if (filter == "All")
     {
-
-    }
-    
-    // Catan
-    else if (filter == "Catan")
-    {
-
+        displayProducts();
     }
 
-    // Dungeons & Dragons
-    else if (filter == "Dungeons & Dragons")
+    // Filters
+    while (i < aStore.length)
     {
-
-    }
-
-    // Pokemon
-    else if (filter == "Pokemon")
-    {
-
+        
     }
 }
