@@ -341,7 +341,28 @@ function removeCart()
 // Creating 'function submitReview()'
 function submitReview()
 {
-    // TO DO STILL
+    // Creating temp variables to collect inputs
+    var reviewProduct = document.getElementById("reviewProduct").value;
+    var reviewTitle = document.getElementById("reviewTitle").value;
+    var reviewText = document.getElementById("reviewText").value;
+    
+    // Creating new reviews
+    for (var i = 0; i < aStore.length; i++)
+    {
+        // Validating product ID
+        if (aStore[i].id == reviewProduct)
+        {
+            // Create temp variables for new reviews
+            var tempReview = document.createElement("div");
+            var tempProduct = document.createElement("p");
+            var tempTitle = document.createElement("p");
+            var tempText = document.createElement("p");
+
+            // Populating data to append
+            
+
+        }
+    }
 }
 
 
