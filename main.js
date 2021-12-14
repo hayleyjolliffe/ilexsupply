@@ -360,11 +360,19 @@ function filter()
     if (filter == "All")
     {
         displayProducts();
+        return;
     }
 
     // Filters
     while (i < aStore.length)
     {
-        
+        if (aStore[i].c == filter)
+        {
+            aFiltered.push(aStore[i]);
+        }
+        i++;
     }
+
+    // Display filtered products
+    displayProducts(aFiltered);
 }
