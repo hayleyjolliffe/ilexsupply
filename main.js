@@ -348,5 +348,31 @@ function submitReview()
 // Creating 'function filter()'
 function filter()
 {
-    // TO DO STILL
+    // Collect category filter
+    var filter = document.getElementById("categories").value;
+
+    // Filter products
+    // All
+    if (filter == "All")
+    {
+
+    }
+    
+    // Catan
+    else if (filter == "Catan")
+    {
+
+    }
+
+    // Dungeons & Dragons
+    else if (filter == "Dungeons & Dragons")
+    {
+
+    }
+
+    // Pokemon
+    else if (filter == "Pokemon")
+    {
+
+    }
 }
