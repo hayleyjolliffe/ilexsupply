@@ -37,6 +37,11 @@ a:hover {
         text-decoration:underline;
 }
 
+img {
+        margin:0 auto;
+        text-decoration:none;
+}
+
 b {
         font-family:'Inter', Helvetica, sans-serif;
         font-weight:600;
@@ -70,9 +75,14 @@ li {
 
 /* TIMESTAMP */
 #timestamp {
+        color:#202020;
         font-weight:400;
         font-size:12px;
         text-decoration:none;
+        width:15vw;
+        line-height:120%;
+        margin-left:90vw;
+        margin-top:0;
 }
 
 
