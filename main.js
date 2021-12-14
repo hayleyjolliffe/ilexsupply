@@ -166,7 +166,7 @@ function initialize()
         CALL DISPLAYITEMS()
         Populates the store with items from 'aStore' array
     */
-    displayItems(aStore);
+    displayProducts(aStore);
 
     /*
         CALL DISPLAYCART()
@@ -227,10 +227,10 @@ function displayProducts(aStore)
 
     
     // Collecting information from the shop elements
-    var divShop = document.getElementById("shopInventory");
+    var divProducts = document.getElementById("shopInventory");
 
     // Clear anything currently in the shop area
-    divShop.innerHTML = "";
+    divProducts.innerHTML = "";
 
     // Populate shop with 'aStore' inventory
     for (var i = 0; i <= aStore.length; i++)
