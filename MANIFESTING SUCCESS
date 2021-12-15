@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-Us">
+
+<head>
+
+    <title>Ilex Supply Co.</title>
+    <!-- <link rel="stylesheet" href="main.css"> -->
+
+    <!-- METAS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" description="Ilex Supply Co." content="It's dangerous to go alone. Gear up for your next adventure here. Shop concept for INFO-1251 & INFO-1272 final project.">
+    <meta name="keywords" content="pokemon, catan, dnd, dungeons & dragons, tcg, trading card game, nintendo, tabletop game">
+
+    <!-- FONT IMPORT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- HEADER + NAV -->
+    <div id="topbar">
+
+        <!-- SHOP TITLE -->
+        <h1>Ilex Supply Co.</h1>
+
+        <!-- LINKS -->
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src=""></script>
+
+</body>
+
+</html>
