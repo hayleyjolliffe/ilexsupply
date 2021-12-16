@@ -22,7 +22,7 @@
 <head>
 
     <title>Ilex Supply Co.</title>
-    <!-- <link rel="stylesheet" href="main.css"> -->
+    <link rel="stylesheet" href="main.css">
 
     <!-- METAS -->
     <meta charset="utf-8">
