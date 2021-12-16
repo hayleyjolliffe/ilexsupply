@@ -58,11 +58,11 @@
     <!-- SHOP -->
     <div id="shop">
 
-        <!-- FIELDSET START -->
+        <!-- FIELDSET -->
         <fieldset>
 
             <!-- FIELDSET NAME -->
-            <legend><b>SHOP</b></legend>
+            <legend><b>SHOP:</b></legend>
             <!-- FIELDSET NAME END -->
 
             <!-- FILTERS -->
@@ -87,7 +87,7 @@
         </fieldset>
         <!-- FIELDSET END -->
 
-        <!-- FIELDSET START -->
+        <!-- FIELDSET -->
         <fieldset>
 
             <!-- FIELDSET NAME -->
@@ -116,9 +116,77 @@
 
         <br>
 
-        <!-- FIELDSET START -->
+        <!-- FIELDSET -->
         <fieldset>
-            
+
+            <!-- FIELDSET NAME -->
+            <legend><b>CART:</b></legend>
+            <!-- FIELDSET NAME END -->
+
+            <!-- SPAN -->
+            <span>
+                <b>Product | ID | Price | Qty | Subtotal</b>
+            </span>
+            <!-- SPAN END -->
+
+            <br>
+
+            <!-- CART OUTPUT -->
+            <div id="cartOutput">
+
+                <!-- CART OUTPUT GENERATED HERE -->
+
+            </div>
+            <!-- CART OUTPUT END -->
+
+            <br>
+
+            <!-- CHECKOUT -->
+            <div id="checkout">
+
+                <!-- CHECKOUT DETAILS GENERATED HERE -->
+
+            </div>
+            <!-- CHECKOUT END -->
+
+        </fieldset>
+        <!-- FIELDSET END -->
+
+        <br>
+
+        <!-- FIELDSET -->
+        <fieldset>
+
+            <!-- FIELDSET NAME -->
+            <legend><b>REVIEWS:</b></legend>
+            <!-- FIELDSET NAME END -->
+
+            <!-- ADD REVIEW INPUTS -->
+            <label for id="reviewID">Product ID:</label>
+            <input id="reviewID" type="text" placeholder="C973">
+
+            <br>
+
+            <label for id="reviewText">Review:</label>
+            <input id="reviewText" type="text" placeholder="Review">
+
+            <br>
+
+            <input type="button" value="Submit">
+            <!-- ADD REVIEW INPUTS END -->
+
+            <br>
+
+            <hr>
+
+            <!-- REVIEWS-->
+            <div id="reviews">
+
+                <!-- REVIEWS GET GENERATED HERE -->
+
+            </div>
+            <!-- REVIEWS END -->
+
         </fieldset>
         <!-- FIELDSET END -->
 
@@ -127,6 +195,15 @@
 
     <!-- FOOTER -->
     <div id="footer">
+
+        <!-- DETAILS -->
+        <span>
+            <h3>Ilex Supply Co.</h3>
+            Final project for INFO-1251 & INFO-1272.
+            <br>
+            2021 — Hayley Jolliffe
+        </span>
+        <!-- DETAILS END -->
 
         <!-- COLOPHON -->
         <ul>
