@@ -26,10 +26,119 @@
 
         <!-- SHOP TITLE -->
         <h1>Ilex Supply Co.</h1>
+        <!-- SHOP TITLE END -->
 
         <!-- LINKS -->
+        <ul>
+            <li><a href="#">TCGs</a></li>
+            <li><a href="#">Games</a></li>
+            <li><a href="#">Merch</a></li>
+        </ul>
+        <!-- LINKS END -->
+
+        <!-- TIMESTAMP -->
+        <span></span>
+        <!-- TIMESTAMP END -->
+
+        <!-- CURRENCY -->
+        <span>
+            <select>
+                <option>$CAD</option>
+                <option>$USD</option>
+                <option>$AUD</option>
+                <option>GBP</option>
+                <option>EUR</option>
+            </select>
+        </span>
+        <!-- CURRENCY END -->
 
     </div>
+    <!-- HEADER + NAV END -->
+
+    <!-- SHOP -->
+    <div id="shop">
+
+        <!-- FIELDSET START -->
+        <fieldset>
+
+            <!-- FIELDSET NAME -->
+            <legend><b>SHOP</b></legend>
+            <!-- FIELDSET NAME END -->
+
+            <!-- FILTERS -->
+            <select>
+                <option>All</option>
+                <option>Catan</option>
+                <option>Dungeons & Dragons</option>
+                <option>Pokemon</option>
+            </select>
+            <!-- FILTERS END -->
+
+            <br>
+
+            <!-- INVENTORY -->
+            <div>
+
+                <!-- PRODUCTS GET GENERATED HERE -->
+
+            </div>
+            <!-- INVENTORY END -->
+
+        </fieldset>
+        <!-- FIELDSET END -->
+
+        <!-- FIELDSET START -->
+        <fieldset>
+
+            <!-- FIELDSET NAME -->
+            <legend><b>SELECT ITEMS:</b></legend>
+            <!-- FIELDSET NAME END -->
+
+            <!-- INPUTS -->
+            <label for id="productID">Product ID: </label>
+            <input id="productID" type="text" placeholder="C973">
+
+            <br>
+
+            <label for id="productQty">Quantity:</label>
+            <input id="productQty" type="number" placeholder="1">
+            <!-- INPUTS END -->
+
+            <br>
+
+            <!-- BUTTONS -->
+            <input id="addButton" type="button" value="Add Item">
+            <input id="removeButton" type="button" value="Remove Item">
+            <!-- BUTTONS END -->
+
+        </fieldset>
+        <!-- FIELDSET END -->
+
+        <br>
+
+        <!-- FIELDSET START -->
+        <fieldset>
+            
+        </fieldset>
+        <!-- FIELDSET END -->
+
+    </div>
+    <!-- SHOP END -->
+
+    <!-- FOOTER -->
+    <div id="footer">
+
+        <!-- COLOPHON -->
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="mailto:h_jolliffe128179@fanshawec.ca">Contact</a></li>
+        </ul>
+
+    </div>
+    <!-- FOOTER END -->
 
     <!-- JAVASCRIPT -->
     <script src=""></script>
