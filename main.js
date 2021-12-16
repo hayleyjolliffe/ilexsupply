@@ -25,3 +25,21 @@ function Cart(id, p, q, s)
     this.quantity = q;              // Integer
     this.shipping = s;              // Float
 }
+
+
+/*
+
+    GLOBALS
+
+*/
+// ARRAYS
+// Creating store inventory array
+var aProducts = [];
+
+// Creating cart inventory array
+var aCart = [];
+
+// VARIABLES
+// Creating default currency variables
+var cValue = 1;
+var cSymbol = "$CAD";
