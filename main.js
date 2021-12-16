@@ -45,6 +45,7 @@ var aMonths = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.", "Jul.", "Aug.", "S
 
 // VARIABLES
 // Creating default currency variables
+var currency = document.getElementById("currency");
 var cValue = 1;
 var cSymbol = "$CAD";
 
@@ -194,7 +195,34 @@ function displayCart()
         }
     }
 
-    // Calculating totals
+    // Checking currency
+    // CAD
+    if (currency.value == "CAD")
+    {
+        cValue = 1;
+    }
+    // USD
+    else if (currency.value == "USD")
+    {
+        cValue = 0.79;
+    }
+    // AUD
+    else if (currency.value == "AUD")
+    {
+        cValue;
+    }
+    // GBP
+    else if (currency.value == "GBP")
+    {
+        cValue;
+    }
+    // EUR
+    else if (currency.value == "EUR")
+    {
+        cValue;
+    }
+    
+    subtotal += ((subtotal + shipping) * cValue);
 
     // Free shipping Easter egg
     if (subtotal >= 25)
