@@ -155,5 +155,5 @@ function initialize()
         CALL DISPLAYCART()
         Populates the cart section with 'aCart' array
     */
-    displayCart(aCart);
+    displayCart();
 }
