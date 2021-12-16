@@ -1,3 +1,21 @@
+<!--
+
+
+
+        FINAL PROJECT
+        for INFO-1251 + INFO-1272
+        || 'Ilex Supply Co.' Store Concept
+        || Due Dec. 17, 2021 @ 11:59PM
+        || index.html
+        Hayley Jolliffe — 2021
+
+        Update: JS component due Dec. 19, 2021 @ 11:59PM
+
+
+
+-->
+
+<!-- CODE START -->
 <!DOCTYPE html>
 <html lang="en-Us">
 
@@ -219,7 +237,10 @@
 
     <!-- JAVASCRIPT -->
     <script src=""></script>
+    <!-- JAVASCRIPT END -->
 
 </body>
+<!-- BODY END -->
 
 </html>
+<!-- CODE END -->
