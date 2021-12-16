@@ -9,323 +9,237 @@
         || index.html
         Hayley Jolliffe — 2021
 
-        Update: Due Dec. 19, 2021 @ 11:59PM
+        Update: JS component due Dec. 19, 2021 @ 11:59PM
 
 
 
 -->
+
 <!-- CODE START -->
 <!DOCTYPE html>
 <html lang="en-Us">
 
-    <!-- HEAD START -->
-    <head>
+<head>
 
-        <title>Ilex Supply Co.</title>
-        <link rel="stylesheet" href="main.css">
+    <title>Ilex Supply Co.</title>
+    <link rel="stylesheet" href="main.css">
 
-        <!-- METAS -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="Description" description="Ilex Supply Co." content="It's dangerous to go alone. Gear up for your next adventure here. Shop concept for INFO-1251 & INFO-1272 final project.">
-        <meta name="keywords" content="pokemon, catan, dnd, dungeons & dragons, tcg, trading card game, nintendo, tabletop game">
+    <!-- METAS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" description="Ilex Supply Co." content="It's dangerous to go alone. Gear up for your next adventure here. Shop concept for INFO-1251 & INFO-1272 final project.">
+    <meta name="keywords" content="pokemon, catan, dnd, dungeons & dragons, tcg, trading card game, nintendo, tabletop game">
 
-        <!-- FONT IMPORT -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- FONT IMPORT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
-    </head>
-    <!-- HEAD END -->
+</head>
 
-    <!-- BODY START -->
-    <body onload="initialize()">
-    
-        <!-- NAV BAR -->
-        <nav id="navbar">
+<body>
 
-           <!-- LINKS -->
-            <ul>
-                
-                <!-- ICON -->
-                <a href="/index.html">
-                    <img src="https://super.so/icon/dark/image.svg" alt="Ilex Supply Co. logo">
-                </a>
+    <!-- HEADER + NAV -->
+    <div id="topbar">
 
-                <!-- TCGs -->
-                <li><a href="#">TCGs</a></li>
-                
-                <!-- GAMES -->
-                <li><a href="#">Games</a></li>
-                
-                <!-- MERCH -->
-                <li><a href="#">Merch</a></li>
-                
-                <!-- ABOUT -->
-                <li><a href="#">About</a></li>
-                
-                <!-- CONTACT -->
-                <li><a href="mailto:h_jolliffe128179@fanshawec.ca">Contact</a></li>
+        <!-- SHOP TITLE -->
+        <h1>Ilex Supply Co.</h1>
+        <!-- SHOP TITLE END -->
 
-            </ul>
-            <!-- LINKS END -->
+        <!-- LINKS -->
+        <ul>
+            <li><a href="#">TCGs</a></li>
+            <li><a href="#">Games</a></li>
+            <li><a href="#">Merch</a></li>
+        </ul>
+        <!-- LINKS END -->
 
-            <!-- TIMESTAMP -->
-            <div id="timestamp">
-                <!-- TIMESTAMP DATA GOES HERE (FROM JS FUNCTION) -->
-            </div>
+        <!-- TIMESTAMP -->
+        <span id="timestamp"></span>
+        <!-- TIMESTAMP END -->
 
-        </nav>
-        <!-- NAV BAR END -->
+        <!-- CURRENCY -->
+        <span>
+            <select>
+                <option>$CAD</option>
+                <option>$USD</option>
+                <option>$AUD</option>
+                <option>GBP</option>
+                <option>EUR</option>
+            </select>
+        </span>
+        <!-- CURRENCY END -->
 
-        <hr>
+    </div>
+    <!-- HEADER + NAV END -->
 
-        <!-- HERO -->
-        <div id="hero">
+    <!-- SHOP -->
+    <div id="shop">
 
-            <div id="heroText">
-                <b>
-                    It's dangerous to go alone.
-                    
-                    <br>
-
-                    Gear up for your next adventure here.
-                </b>
-            </div>
-
-        </div>
-        <!-- HERO END -->
-
-        <hr>
-
-        <!-- SELECTORS -->
-        <fieldset id="filters">
+        <!-- FIELDSET -->
+        <fieldset>
 
             <!-- FIELDSET NAME -->
-            <legend><b>FILTER ITEMS</b></legend>
+            <legend><b>SHOP:</b></legend>
+            <!-- FIELDSET NAME END -->
 
-            <!-- CURRENCY -->
-            <select id="currencies" onchange="currencySelection()">
-
-                <!-- CAD (DEFAULT) -->
-                <option value="CAD">$CAD</option>
-
-                <!-- USD -->
-                <option value="USD">$USD</option>
-
-                <!-- AUD -->
-                <option value="AUD">$AUD</option>
-
-                <!-- GBP -->
-                <option value="GBP">£GBP</option>
-
-                <!-- EUR -->
-                <option value="EUR">€EUR</option>
-
+            <!-- FILTERS -->
+            <select>
+                <option>All</option>
+                <option>Catan</option>
+                <option>Dungeons & Dragons</option>
+                <option>Pokemon</option>
             </select>
+            <!-- FILTERS END -->
 
-            <!-- CATEGORY -->
-            <select id="categories" onchange="filter()">
+            <br>
 
-                <!-- ALL -->
-                <option value="all">All</option>
+            <!-- INVENTORY -->
+            <div>
 
-                <!-- CATAN -->
-                <option value="catan">Catan</option>
+                <!-- PRODUCTS GET GENERATED HERE -->
 
-                <!-- DUNGEONS & DRAGONS -->
-                <option value="dnd">Dungeons & Dragons</option>
-
-                <!-- POKEMON -->
-                <option value="pokemon">Pokemon</option>
-
-            </select>
+            </div>
+            <!-- INVENTORY END -->
 
         </fieldset>
-        <!-- SELECTORS END -->
+        <!-- FIELDSET END -->
 
-        <hr>
+        <!-- FIELDSET -->
+        <fieldset>
 
-        <!-- PRODUCTS -->
-        <div id="products">
+            <!-- FIELDSET NAME -->
+            <legend><b>SELECT ITEMS:</b></legend>
+            <!-- FIELDSET NAME END -->
 
-            <!-- PRODUCT OUTPUT -->
-            <fieldset>
+            <!-- INPUTS -->
+            <label for id="productID">Product ID: </label>
+            <input id="productID" type="text" placeholder="C973">
 
-                <!-- FIELDSET NAME -->
-                <legend><b>PRODUCTS</b></legend>
-                
-                <!-- TABLE -->
-                <table id="productTable">
+            <br>
 
-                    <tbody onload="displayItems()">
+            <label for id="productQty">Quantity:</label>
+            <input id="productQty" type="number" placeholder="1">
+            <!-- INPUTS END -->
 
-                        <!-- POPULATE TABLE IN JS -->
+            <br>
 
-                    </tbody>
+            <!-- BUTTONS -->
+            <input id="addButton" type="button" value="Add Item">
+            <input id="removeButton" type="button" value="Remove Item">
+            <!-- BUTTONS END -->
 
-                </table>
+        </fieldset>
+        <!-- FIELDSET END -->
 
-            </fieldset>
+        <br>
 
-            <!-- ADD/REMOVE CART -->
-            <fieldset>
+        <!-- FIELDSET -->
+        <fieldset>
 
-                <!-- FIELDSET NAME -->
-                <legend><b>ADD TO CART</b></legend>
+            <!-- FIELDSET NAME -->
+            <legend><b>CART:</b></legend>
+            <!-- FIELDSET NAME END -->
 
-                <!-- INPUTS -->
-                <input id="inputID" type="text" placeholder="Item ID">
-                
-                <br>
-                
-                <input id="inputQuantity" type="number" placeholder="1">
+            <!-- SPAN -->
+            <span>
+                <b>Product | ID | Price | Qty | Subtotal</b>
+            </span>
+            <!-- SPAN END -->
 
-                <br>
+            <br>
 
-                <!-- BUTTONS -->
-                <input type="button" value="Add to Cart" onclick="addCart()">
-                <input type="button" value="Remove From Cart" onclick="removeCart()">
+            <!-- CART OUTPUT -->
+            <div id="cartOutput">
 
-            </fieldset>
-            <!-- ADD/REMOVE CART END -->
+                <!-- CART OUTPUT GENERATED HERE -->
 
-        </div>
-        <!-- PRODUCTS END -->
+            </div>
+            <!-- CART OUTPUT END -->
 
-        <hr>
+            <br>
 
-        <!-- REVIEWS -->
-        <div id="reviews">
+            <!-- CHECKOUT -->
+            <div id="checkout">
 
-            <fieldset>
+                <!-- CHECKOUT DETAILS GENERATED HERE -->
 
-                <!-- FIELDSET NAME -->
-                <legend><b>REVIEWS</b></legend>
+            </div>
+            <!-- CHECKOUT END -->
 
-                <!-- SUBMIT REVIEW -->
-                <fieldset id="submit">
+        </fieldset>
+        <!-- FIELDSET END -->
 
-                    <!-- FIELDSET NAME -->
-                    <legend><b>SUBMIT REVIEW</b></legend>
+        <br>
 
-                    <!-- PRODUCT ID INPUT -->
-                    <label for id="reviewProduct">Product ID:</label>
-                    <input id="reviewProduct" type="text" placeholder="Item ID (ie. 'D973')">
+        <!-- FIELDSET -->
+        <fieldset>
 
-                    <br>
+            <!-- FIELDSET NAME -->
+            <legend><b>REVIEWS:</b></legend>
+            <!-- FIELDSET NAME END -->
 
-                    <!-- TITLE INPUT -->
-                    <label for id="reviewTitle">Title:</label>
-                    <input id="reviewTitle" type="text" placeholder="Title your review here.">
+            <!-- ADD REVIEW INPUTS -->
+            <label for id="reviewID">Product ID:</label>
+            <input id="reviewID" type="text" placeholder="C973">
 
-                    <br>
+            <br>
 
-                    <!-- REVIEW INPUT -->
-                    <label for id="reviewText">Review:</label>
-                    <input id="reviewText" type="text" placeholder="Type your review here.">
-                
-                </fieldset>
-                <!-- SUBMIT REVIEW END -->
+            <label for id="reviewText">Review:</label>
+            <input id="reviewText" type="text" placeholder="Review">
 
-                <br>
+            <br>
 
-                <!-- HARDCODED REVIEWS -->
-                <div class="review">
+            <input type="button" value="Submit">
+            <!-- ADD REVIEW INPUTS END -->
 
-                    <!-- REVIEW TITLE -->
-                    <b>(Who's that Pokemon?) It's Pikachu!</b>
+            <br>
 
-                    <!-- REVIEW TEXT -->
-                    <p>
-                        Made me think of that Tiktok. I got the fat Pikachu full art card. The real deal—it's pretty dope.
-                    </p>
+            <hr>
 
-                    <!-- PRODUCT -->
-                    <b>Product purchased: </b>
-                    Pokemon Celebrations: Pikachu Full Art Card
+            <!-- REVIEWS-->
+            <div id="reviews">
 
-                </div>
+                <!-- REVIEWS GET GENERATED HERE -->
 
-                <hr>
-
-                <div class="review">
-
-                    <!-- REVIEW TITLE -->
-                    <b>FAKE FAKE FAKE</b>
-
-                    <!-- REVIEW TEXT -->
-                    <p>
-                        MY 5 YEAR OLD SON KNOWS WHAT A REAL POKEMON CARD LOOKS LIKE AND HE SAYS IT LOOKS FAKE. THIS IS A SCAM!!!
-                    </p>
-
-                    <!-- PRODUCT -->
-                    <b>Not a verified purchase.</b>
-                    
-                </div>
-
-            </fieldset>
-
-        </div>
-        <!-- REVIEWS END -->
-
-        <hr>
-
-        <!-- CART -->
-        <div id="cart">
-
-            <fieldset>
-
-                <!-- FIELDSET NAME -->
-                <legend><b>CART</b></legend>
-
-                <!-- CART DISPLAY -->
-                <div id="displayCart">
-
-                    <!-- DISPLAY USING JS -->
-
-                </div>
-
-            </fieldset>
-
-        </div>
-        <!-- CART END -->
-
-        <hr>
-
-        <!-- CHECKOUT -->
-        <div id="checkout">
-
-            <fieldset id="displayCheckout">
-
-                <!-- FIELDSET NAME -->
-                <legend><b>CHECKOUT</b></legend>
-
-                <div id="shipping">
-
-                    <!-- DISPLAY SHIPPING INFO USING JS -->
-
-                </div>
-
-            </fieldset>
-
-        </div>
-        <!-- CHECKOUT END -->
-
-        <hr>
-
-        <!-- FOOTER -->
-        <div id="footer">
-
-            2021 Ilex Supply Co. — INFO-1251 & INFO-1272 Final Project by <a href="https://twitter.com/hayleyjolliffe">Hayley Jolliffe</a>
-            
-        </div>
-        <!-- FOOTER END -->
-
-
-        <!-- JAVASCRIPT -->
-        <script src="main.js"></script>
-
-    </body>
+            </div>
+            <!-- REVIEWS END -->
+
+        </fieldset>
+        <!-- FIELDSET END -->
+
+    </div>
+    <!-- SHOP END -->
+
+    <!-- FOOTER -->
+    <div id="footer">
+
+        <!-- DETAILS -->
+        <span>
+            <h3>Ilex Supply Co.</h3>
+            Final project for INFO-1251 & INFO-1272.
+            <br>
+            2021 — Hayley Jolliffe
+        </span>
+        <!-- DETAILS END -->
+
+        <!-- COLOPHON -->
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="mailto:h_jolliffe128179@fanshawec.ca">Contact</a></li>
+        </ul>
+
+    </div>
+    <!-- FOOTER END -->
+
+    <!-- JAVASCRIPT -->
+    <script src=""></script>
+    <!-- JAVASCRIPT END -->
+
+</body>
 
 </html>
+<!-- CODE END -->
