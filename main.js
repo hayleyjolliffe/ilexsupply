@@ -157,3 +157,48 @@ function initialize()
     */
     displayCart();
 }
+
+// Creating CART DISPLAY function
+function displayCart()
+{
+    // Creating temp variables for shipping
+    var subtotal = 0;
+    var shipping = 0;
+    var tax = 0;
+    var total = 0;
+    var output = document.getElementById("cartOutput");
+    var display = "";
+    subtotal = parseFloat(subtotal);
+    shipping = parseFloat(shipping);
+    tax = parseFloat(tax);
+    total = parseFloat(total);
+
+    // Clears current output (if any)
+    output.innerHTML = "";
+
+    // Displaying cart
+    if (aCart.length < 1)
+    {
+        // Empty cart
+        output.innerHTML = "Cart is empty.";
+    }
+    else if (aCart.length > 1)
+    {
+        for (var i = 0; i <= aCart.length; i++)
+        {
+            // Creating temp variable for cart output
+            var tempCart = aCart[i];
+
+            // Populating cart display
+            display += tempCart.n + " | " + tempCart.id + " | " + tempCart.p + " | " + tempCart.q + " | " + (tempCart.p * tempCart.q);
+        }
+    }
+
+    // Calculating totals
+
+    // Free shipping Easter egg
+    if (subtotal >= 25)
+    {
+        shipping = 0;
+    }
+}
