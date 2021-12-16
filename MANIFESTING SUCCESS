@@ -55,7 +55,7 @@
         <!-- LINKS END -->
 
         <!-- TIMESTAMP -->
-        <span></span>
+        <span id="timestamp"></span>
         <!-- TIMESTAMP END -->
 
         <!-- CURRENCY -->
