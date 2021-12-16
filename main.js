@@ -55,7 +55,21 @@ var cSymbol = "$CAD";
 
 */
 // Creating TIMESTAMP function
-function timestamp()
+/*
+    PARAMETERS:
+    > Displays current date/time
+    > Time format: HH:MM
+    > Date format: DD/MM/YYYY
+*/
+function displayTime()
 {
     var current = new Date();
+    var day = aDays[current.getDay()];
+    var date = current.getDate();
+    var month = aMonths[current.getMonth()];
+    var year = current.getFullYear();
+    var hours = current.getHours();
+    var minutes = current.getMinutes();
+    var timestamp = (day +  " " + date + " " + month + " " + year + ", " + hours + ":" + minutes);
+    document.getElementById("timestamp").innerHTML = timestamp;
 }
