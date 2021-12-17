@@ -375,7 +375,7 @@ function filter()
     // ALL
     if (filter == "All")
     {
-        displayProducts(aProducts);
+        display(aProducts);
         return;
     }
 
@@ -390,7 +390,7 @@ function filter()
     }
 
     // Update display
-    displayProducts(aFilter);
+    display(aFilter);
 }
 
 // Creating REVIEW function
