@@ -184,3 +184,10 @@ fieldset {
 }
 
 /* MEDIA QUERIES */
+@media only screen and (max-width:400px) {
+        body {
+                font-size:14px;
+                max-width:95vw;
+                max-height:95vh;
+        }
+}
