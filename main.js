@@ -66,12 +66,6 @@ var cSymbol = "$CAD";
 
 */
 // Creating TIMESTAMP function
-/*
-    PARAMETERS:
-    > Displays current date/time
-    > Time format: HH:MM
-    > Date format: DD/MM/YYYY
-*/
 function timestamp()
 {
     var current = new Date();
@@ -86,14 +80,6 @@ function timestamp()
 }
 
 // Creating INITIALIZE function
-/*
-    PARAMETERS:
-    > 'Display the current day/time to the screen'
-    > 'Populate the store items array with AT LEAST 15 store object items
-       with varying data (different categories, quantities, etc.)
-    > Call your function that will display the store items array (Step 4)
-    > Call your function that will display the cart items array (Step 5)
-*/
 function initialize()
 {
     /*
@@ -159,7 +145,7 @@ function initialize()
     /*
         CALL DISPLAYITEMS()
     */
-    displayProducts();
+    display();
 
     /*
         CALL DISPLAYCART()
@@ -432,5 +418,56 @@ function review()
             alert("Invalid ID or text. Please try again!");
             break;
         }
+    }
+}
+
+// Creating DISPLAY function
+function display()
+{
+    // Collect data
+    var divProducts = document.getElementById("inventory");
+
+    // Clear div
+    divProducts.innerHTML = "";
+
+    // Create new products
+    for (var i = 0; i <= aProducts.length; i++)
+    {
+        // Creating temp variables
+        var tempContainer = document.createElement("div");
+        tempContainer.className = "product";
+
+        // Collecting + validating data
+        // IMAGE
+        var tempImage = document.createElement("img");
+        tempImage.src = aProducts[i].image;
+        tempContainer.appendChild(tempImage);
+
+        // NAME
+        var tempName = document.createElement("p");
+        tempName.innerHTML = aProducts[i].name;
+        tempContainer.appendChild(tempName);
+
+        // ID
+        var tempID = document.createElement("p");
+        tempID.innerHTML = aProducts[i].id;
+        tempContainer.appendChild(tempID);
+
+        // DESCRIPTION
+        var tempDescription = document.createElement("p");
+        tempDescription.innerHTML = aProducts[i].description;
+        tempContainer.appendChild(tempDescription);
+
+        // PRICE
+        var tempPrice = document.createElement("p");
+        tempPrice.innerHTML = aProducts[i].price;
+        tempContainer.appendChild(tempPrice);
+
+        // STOCK/QUANTITY
+        var tempQuantity = document.createElement("p");
+        tempQuantity.innerHTML = aProducts[i].quantity;
+        tempContainer.appendChild(tempQuantity);
+
+        divProducts.appendChild(tempContainer);
     }
 }
