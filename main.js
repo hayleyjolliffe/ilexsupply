@@ -209,17 +209,17 @@ function displayCart()
     // AUD
     else if (currency.value == "AUD")
     {
-        cValue;
+        cValue = 1.1;
     }
     // GBP
     else if (currency.value == "GBP")
     {
-        cValue;
+        cValue - 0.69;
     }
     // EUR
     else if (currency.value == "EUR")
     {
-        cValue;
+        cValue = 0.59;
     }
     
     subtotal += ((subtotal + shipping) * cValue);
