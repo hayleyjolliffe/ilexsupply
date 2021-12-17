@@ -26,6 +26,13 @@ function Cart(id, p, q, s)
     this.shipping = s;              // Float
 }
 
+// Creating 'Review' constructor
+function Review(id, t)
+{
+    this.id = id;                   // String
+    this.text = t;                  // String
+}
+
 
 /*
 
@@ -156,7 +163,7 @@ function initialize()
         CALL DISPLAYCART()
         Populates the cart section with 'aCart' array
     */
-    displayCart();
+    displayCart(aCart);
 }
 
 // Creating CART DISPLAY function
@@ -167,21 +174,20 @@ function displayCart()
     var shipping = 0;
     var tax = 0;
     var total = 0;
-    var output = document.getElementById("cartOutput");
-    var display = "";
+    var display = document.getElementById("cartOutput");
     subtotal = parseFloat(subtotal);
     shipping = parseFloat(shipping);
     tax = parseFloat(tax);
     total = parseFloat(total);
 
     // Clears current output (if any)
-    output.innerHTML = "";
+    display.innerHTML = "";
 
     // Displaying cart
     if (aCart.length < 1)
     {
         // Empty cart
-        output.innerHTML = "Cart is empty.";
+        display.innerHTML = "Cart is empty.";
     }
     else if (aCart.length > 1)
     {
@@ -191,7 +197,10 @@ function displayCart()
             var tempCart = aCart[i];
 
             // Populating cart display
-            display += tempCart.n + " | " + tempCart.id + " | " + tempCart.p + " | " + tempCart.q + " | " + (tempCart.p * tempCart.q);
+            display.innerHTML += tempCart.n + " | " + tempCart.id + " | " + tempCart.p + " | " + tempCart.q + " | " + (tempCart.p * tempCart.q);
+
+            // Calculating shipping
+            shipping += tempCart.s;
         }
     }
 
@@ -200,33 +209,38 @@ function displayCart()
     if (currency.value == "CAD")
     {
         cValue = 1;
+        cSymbol = "$";
     }
     // USD
     else if (currency.value == "USD")
     {
         cValue = 0.79;
+        cSymbol = "$";
     }
     // AUD
     else if (currency.value == "AUD")
     {
         cValue = 1.1;
+        cSymbol = "$";
     }
     // GBP
     else if (currency.value == "GBP")
     {
         cValue - 0.69;
+        cSymbol = "£";
     }
     // EUR
     else if (currency.value == "EUR")
     {
         cValue = 0.59;
+        cSymbol = "€";
     }
     
+    // Calculating total
     subtotal += ((subtotal + shipping) * cValue);
-
-    // Free shipping Easter egg
-    if (subtotal >= 25)
-    {
-        shipping = 0;
-    }
+    tax = subtotal * 0.13;
+    total = subtotal + tax;
+    
+    // Displaying cart + total
+    display.innerHTML += "<br><hr> Subtotal: " + cSymbol + (cValue * subtotal.toFixed(2)) + "<br> Tax: " + cSymbol + (cValue * tax.toFixed(2)) + "<br> Shipping: " + cSymbol + (cValue * shipping.toFixed(2)) + "<br><hr> Total: " + cSymbol + (cValue * total.toFixed(2));
 }
