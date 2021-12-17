@@ -388,3 +388,40 @@ function filter()
     // Update display
     displayProducts(aFilter);
 }
+
+// Creating REVIEW function
+function review()
+{
+    // Collect data
+    var reviewID = document.getElementById("reviewID").value;
+    var reviewText = document.getElementById("reviewText").value;
+
+    // Validating
+    for (var i = 0; i <= aProducts.length; i++)
+    {
+        if (aProducts[i].id == reviewID)
+        {
+            // Collecting reviews div
+            var divReviews = document.getElementById("reviews");
+
+            // Creating new review
+            var tempReview = document.createElement("div");
+            tempReview.className += "review";
+
+            var tempProduct = document.createElement("p");
+            var tempText = document.createElement("p");
+            
+            // Collecting product name
+            for (var i = 0; i <= aProducts.length; i++)
+            {
+                if (reviewID == aProducts[i].id)
+                {
+                    tempProduct.innerHTML = aProducts[i].name;
+                }
+            }
+
+            tempText.innerHTML = reviewText;
+
+        }
+    }
+}
