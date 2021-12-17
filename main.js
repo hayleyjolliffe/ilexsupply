@@ -459,31 +459,37 @@ function display()
         // IMAGE
         var tempImage = document.createElement("img");
         tempImage.src = aProducts[i].image;
+        tempImage.setClass = "img";
         tempContainer.appendChild(tempImage);
 
         // NAME
         var tempName = document.createElement("p");
         tempName.innerHTML = aProducts[i].name;
+        tempName.setClass = "p";
         tempContainer.appendChild(tempName);
 
         // ID
         var tempID = document.createElement("p");
         tempID.innerHTML = aProducts[i].id;
+        tempID.setClass = "p";
         tempContainer.appendChild(tempID);
 
         // DESCRIPTION
         var tempDescription = document.createElement("p");
         tempDescription.innerHTML = aProducts[i].description;
+        tempDescription.setClass = "p";
         tempContainer.appendChild(tempDescription);
 
         // PRICE
         var tempPrice = document.createElement("p");
         tempPrice.innerHTML = aProducts[i].price;
+        tempPrice.setClass = "p";
         tempContainer.appendChild(tempPrice);
 
         // STOCK/QUANTITY
         var tempQuantity = document.createElement("p");
         tempQuantity.innerHTML = aProducts[i].quantity;
+        tempPrice.setClass = "p";
         tempContainer.appendChild(tempQuantity);
 
         divProducts.appendChild(tempContainer);
