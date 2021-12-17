@@ -155,15 +155,13 @@ function initialize()
 
     /*
         CALL DISPLAYITEMS()
-        Populates the store with items from 'aProducts' array
     */
-    displayProducts(aProducts);
+    displayProducts();
 
     /*
         CALL DISPLAYCART()
-        Populates the cart section with 'aCart' array
     */
-    displayCart(aCart);
+    displayCart();
 }
 
 // Creating CART DISPLAY function
@@ -308,6 +306,52 @@ function addCart()
         aProducts[newProduct].quantity -= addQty;
         alert("Added to cart!");
     }
+    displayCart();
+    filter();
+}
+
+// Creating REMOVE function
+function removeCart()
+{
+    // Collect data
+    var removeID = document.getElementById("itemID").innerHTML;
+    var removeQty = document.getElementById("itemQty").value;
+    var removeI = null;
+    var item = {};
+    removeQty = parseInt(removeQty);
+
+    // Validating data
+    for (var i = 0; i <= aCart.length; i++)
+    {
+        if (aCart[i].id == removeID)
+        {
+            removeI = i;
+        }
+    }
+    for (var i = 0; i <= aProducts.length; i++)
+    {
+        if (aProducts[i].id == removeID)
+        {
+            item = aProducts[i];
+        }
+    }
+    if (removeI == null)
+    {
+        alert("Invalid ID. Please try again!");
+        document.getElementById("itemID").innerHTML = "";
+        return;
+    }
+    if (removeQty >= aCart[removeI].quantity)
+    {
+        item.quantity += aCart[removeI].quantity;
+        aCart.splice(removeI,1);
+    }
+    else if (removeQty <= aCart[removeI].quantity)
+    {
+        aCart[removeI].quantity -= removeQty;
+        item.quantity += removeQty;
+    }
+    alert("Removed from cart!");
     displayCart();
     filter();
 }
