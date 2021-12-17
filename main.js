@@ -46,6 +46,9 @@ var aProducts = [];
 // Creating cart inventory array
 var aCart = [];
 
+// Creating filtered inventory array
+var aFilter = [];
+
 // Creating timestamp function arrays
 var aDays = ["Sun.", "Mon.", "Tue.", "Wed.", "Thu.", "Fri.", "Sat."];
 var aMonths = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.", "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."];
@@ -354,4 +357,34 @@ function removeCart()
     alert("Removed from cart!");
     displayCart();
     filter();
+}
+
+// Creating FILTER function
+function filter()
+{
+    // Collect data
+    var filter = document.getElementById("filter").value;
+
+    // Filter products
+    var i = 0;
+
+    // ALL
+    if (filter == "All")
+    {
+        displayProducts(aProducts);
+        return;
+    }
+
+    // FILTERS
+    while (i <= aProducts.length)
+    {
+        if (aProducts[i].category == filter)
+        {
+            aFilter.push(aProducts[i]);
+        }
+        i++;
+    }
+
+    // Update display
+    displayProducts(aFilter);
 }
