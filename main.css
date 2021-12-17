@@ -184,5 +184,11 @@ li {
      height:25vh; 
 }
 
+#colophon {
+        float:right;
+        text-align:left;
+        padding:1vw 3vw 1vw 1vw;
+        margin:0 auto;
+}
 
 /* MEDIA QUERIES */
