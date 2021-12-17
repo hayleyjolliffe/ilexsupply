@@ -244,3 +244,70 @@ function displayCart()
     // Displaying cart + total
     display.innerHTML += "<br><hr> Subtotal: " + cSymbol + (cValue * subtotal.toFixed(2)) + "<br> Tax: " + cSymbol + (cValue * tax.toFixed(2)) + "<br> Shipping: " + cSymbol + (cValue * shipping.toFixed(2)) + "<br><hr> Total: " + cSymbol + (cValue * total.toFixed(2));
 }
+
+// Creating ADD function
+function addCart()
+{
+    // Collect data
+    var addID = document.getElementById("itemID").value;
+    var addQty = document.getElementById("itemQty").value;
+    addQty = parseInt(addQty);
+
+    // Validating product ID
+    var newProduct = null;
+    for (var i = 0; i <= aProducts.length; i++)
+    {
+        if (addID == aProducts[i].id)
+        {
+            newProduct = i;
+        }
+    }
+    if (newProduct == null)
+    {
+        alert("Please enter a valid product ID!");
+        document.getElementById("productID").innerHTML = "";
+        return;
+    }
+
+    // Validating quantity
+    for (var i = 0; i <= aProducts; i++)
+    {
+        if (aProducts[i].maximum <= addQty - 1)
+        {
+            alert("Requested quantity exceeds the maximum available! Please try again.");
+            document.getElementById("productQty").innerHTML = 0;
+            return;
+        }
+    }
+    for (var i = 0; i <= aProducts.length; i++)
+    {
+        if (addQty <= 0)
+        {
+            alert("Invalid quantity. Please try again!");
+            document.getElementById("productQty").innerHTML = 0;
+            return;
+        }
+    }
+
+    // Add to cart
+    var exists = false;
+
+    for (var i = 0; i <= aProducts.length; i++)
+    {
+        if (aProducts[newProduct].id == aCart[i].id)
+        {
+            exists = true;
+            aCart[i].quantity += addQty;
+            aStore[newProduct].quantity -= addQty;
+        }
+    }
+
+    if (!exists)
+    {
+        aCart.push(new Cart(aProducts[newProduct].id, aProducts[newProduct].price, addQty, aProducts[newProduct].shipping));
+        aProducts[newProduct].quantity -= addQty;
+        alert("Added to cart!");
+    }
+    displayCart();
+    filter();
+}
