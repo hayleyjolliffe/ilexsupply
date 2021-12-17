@@ -1,5 +1,23 @@
 /*
 
+
+
+        FINAL PROJECT
+        for INFO-1251 + INFO-1272
+        || 'Ilex Supply Co.' Store Concept
+        || Due Dec. 17, 2021 @ 11:59PM
+        || main.js
+        Hayley Jolliffe — 2021
+
+        Update: Due Dec. 19, 2021 @ 11:59PM
+
+
+
+*/
+
+
+/*
+
     CONSTRUCTORS
 
 */
