@@ -17,14 +17,15 @@
 
 /*-- GLOBALS --*/
 body {
-        background-color:#fafafa;
-        color:#202020;
+        background-color:#202020;
+        color:#fafafa;
         font-family:'Inter', Helvetica, sans-serif;
         font-size:16px;
         font-weight:400;
         text-decoration:none;
         max-width:100vw;
         margin:0 auto;
+        line-height:100%;
 }
 
 a {
@@ -40,8 +41,7 @@ a:hover {
 img {
         max-width:10vw;
         max-height:25vh;
-        margin:0 auto;
-        padding:10px;
+        margin:2vw;
         text-decoration:none;
         float:left;
 }
@@ -53,7 +53,7 @@ b {
 
 ul {
         text-align:left;
-        margin:5px;
+        margin:2vw 0 0 2vw;
 }
 
 li {
@@ -63,6 +63,16 @@ li {
         text-align:left;
         padding:5px;
         margin:5px;
+}
+
+h1 {
+        line-height:80%;
+        margin:2vw 0 0 2vw;
+}
+
+h4 {
+        line-height:80%;
+        margin:2vw 0 0 2vw;
 }
 
 
@@ -92,31 +102,13 @@ li {
 }
 
 
-/* HERO */
-#hero {
-        width:100vw;
-        height:25vh;
-        background-image:url('https://imgr.search.brave.com/jEo5WmGzOvdVtLea8WkzxQd8kLb_0dkHZBE6HQR4mgA/fit/1200/1080/ce/1/aHR0cDovL3dhbGxw/YXBlcmNhdmUuY29t/L3dwL1ljdjVyNnYu/anBn');
-        background-size:100vw;
-        background-position:100%;
-        margin:0 auto;
-}
-
-#heroText {
-        color:#fafafa;
-        font-size:32px;
-        font-weight:600;
-        line-height:120%;
-        width:50vw;
-        text-align:center;
-        margin:0 auto;
-        padding-top:50px;
-}
-
-
 /* SELECTORS */
-#filters {
-
+#filter {
+        margin:0 2vw 1vh 0;
+        background-color:#202020;
+        color:#fafafa;
+        padding:4px 8px 4px 4px;
+        border-radius:2vw;
 }
 
 #currency {
@@ -129,16 +121,21 @@ li {
 
 
 /* SHOP */
+fieldset {
+        border-radius:2vw;
+        margin-bottom:2vh;
+}
+
 #products {
         display:block;
 }
 
 .product {
         display:block;
-        max-width:90vw;
-        border:1px solid #202020;
+        max-width:95vw;
+        border:1px solid #fafafa;
         border-radius:2vw;
-        margin:5px;
+        margin:1vh 1vw 1vh 1vw;
         padding:5px;
 }
 
@@ -151,27 +148,22 @@ li {
 }
 
 .review {
-
+        display:block;
+        max-width:95vw;
+        border:1px solid #fafafa;
+        border-radius:2vw;
+        margin:1vh 1vw 1vh 1vw;
+        padding:5px;
 }
 
 
 /* CART */
 #cart {
-
+        border-radius:2vw;
 }
 
 #displayCart {
-
-}
-
-
-/* CHECKOUT */
-#checkout {
-
-}
-
-#checkoutDisplay {
-
+        border-radius:2vw;
 }
 
 
