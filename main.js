@@ -422,6 +422,15 @@ function review()
 
             tempText.innerHTML = reviewText;
 
+            // Append div
+            tempReview.appendChild(tempProduct);
+            tempReview.appendChild(tempText);
+            divReviews.appendChild(tempReview);
+        }
+        else if (reviewID == 0 || reviewText == 0)
+        {
+            alert("Invalid ID or text. Please try again!");
+            break;
         }
     }
 }
