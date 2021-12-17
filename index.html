@@ -60,12 +60,12 @@
 
         <!-- CURRENCY -->
         <span>
-            <select>
-                <option>$CAD</option>
-                <option>$USD</option>
-                <option>$AUD</option>
-                <option>GBP</option>
-                <option>EUR</option>
+            <select id="currency">
+                <option value="CAD">$CAD</option>
+                <option value="USD">$USD</option>
+                <option value="AUD">$AUD</option>
+                <option value="GBP">£GBP</option>
+                <option value="EUR">€EUR</option>
             </select>
         </span>
         <!-- CURRENCY END -->
@@ -84,7 +84,7 @@
             <!-- FIELDSET NAME END -->
 
             <!-- FILTERS -->
-            <select>
+            <select id="filter">
                 <option>All</option>
                 <option>Catan</option>
                 <option>Dungeons & Dragons</option>
@@ -156,16 +156,6 @@
 
             </div>
             <!-- CART OUTPUT END -->
-
-            <br>
-
-            <!-- CHECKOUT -->
-            <div id="checkout">
-
-                <!-- CHECKOUT DETAILS GENERATED HERE -->
-
-            </div>
-            <!-- CHECKOUT END -->
 
         </fieldset>
         <!-- FIELDSET END -->
